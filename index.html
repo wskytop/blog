@@ -5,6 +5,24 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>daydayup</title>
+    <script>
+      (function () {
+        function setRem() {
+          let domWidth =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth;
+          let dpr = window.devicePixelRatio || 1;
+          document.documentElement.style.fontSize =
+            (domWidth > 750 ? 750 : domWidth < 375 ? 375 : domWidth) / 75 +
+            "px";
+        }
+        setRem();
+        window.onresize = function () {
+          setRem();
+        };
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>

@@ -1,7 +1,14 @@
-<template></template>
-
-<script>
-export default {};
+<template>
+  <Header />
+  <div class="g-main">
+    <router-view />
+  </div>
+</template>
+<script setup lang="ts">
+import Header from '@/header.vue'
 </script>
-
-<style></style>
+<style scoped>
+.g-main {
+  min-height: calc(100vh - 35rem);
+}
+</style>

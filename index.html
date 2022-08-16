@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/font.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>daydayup</title>
     <script>
       (function () {
@@ -12,7 +15,6 @@
             window.innerWidth ||
             document.documentElement.clientWidth ||
             document.body.clientWidth;
-          let dpr = window.devicePixelRatio || 1;
           document.documentElement.style.fontSize =
             (domWidth > 750 ? 750 : domWidth < 375 ? 375 : domWidth) / 75 +
             "px";

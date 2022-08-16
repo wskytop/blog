@@ -1,8 +1,15 @@
-###目录结构
+### 运行
 ```
- - dist   // 打包文件
-  - doc    // md文档文件管理
-  - html   // 项目中可能会存在的静态页面存放管理
+安装依赖
+yarn
+运行
+yarn dev
+打包
+yarn build
+```
+### 目录结构
+```
+  - dist   // 打包文件
   - public // 发布环境html同级文件目录
   - src    // 项目核心代买
     - compontents // vue组件目录

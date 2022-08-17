@@ -28,6 +28,20 @@ ul {
   display: flex;
 }
 
+.flex-col-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-col-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .flex-row-b {
   display: flex;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 <template>
   <div class="header" :style="{ backgroundImage: 'url(' + author.bgImg + ')', backgroundSize: 'cover' }">
-    <div class="banner flex-row-b">
-      <div class="header-title">
+    <div class="banner flex-row-b" ref="banner">
+      <div class="header-title pointer">
         <div>daydayup</div>
       </div>
       <div class="tab-list flex">
@@ -10,29 +10,49 @@
       </div>
     </div>
     <div class="introduction flex-col-a">
-      <div class="avatar">
+      <div class="avatar pointer">
         <el-avatar :size="128" :src="author.avatar" />
       </div>
-      <div class="title">{{ author.name }}</div>
-      <div class="description">{{ author.description }}</div>
+      <div class="title pointer">{{ author.name }}</div>
+      <div class="description pointer">{{ author.description }}</div>
       <!-- <div class="myOthers"></div> -->
     </div>
   </div>
 </template>
 <script setup>
 import { useRouter } from "vue-router"
-import { ref } from 'vue'
+import { onMounted, ref, nextTick, onUnmounted } from 'vue'
 import { kyt, pmh } from '~/config/author'
 const $router = useRouter()
 const author = ref({})
 author.value = kyt
-console.log(author.value);
 const goFont = () => {
   $router.push('/')
 }
 const goAbout = () => {
   $router.push('/about')
 }
+const banner = ref(null)
+const changeHeight = () => {
+  let scrollHeight = document.documentElement.scrollTop || document.body.scrollTop; //滚动高度
+  if (scrollHeight > 10) {
+    banner.value.classList.remove('open')
+    banner.value.classList.add('close')
+  } else {
+    banner.value.classList.remove('close')
+    banner.value.classList.add('open')
+  }
+}
+onMounted(() => {
+  nextTick(() => {
+    window.addEventListener("scroll", changeHeight); // 监听（绑定）滚轮滚动事件
+  })
+})
+onUnmounted(() => {
+  nextTick(() => {
+    window.removeEventListener("scroll", changeHeight); // 监听（绑定）滚轮滚动事件
+  })
+})
 </script>
 
 <style lang="scss" scoped>
@@ -40,17 +60,17 @@ const goAbout = () => {
   height: 42rem;
 
   .banner {
-    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.112);
+    position: fixed;
     width: 100vw;
     height: 4.5rem;
-    background-color: transparent;
+    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.112);
 
     .header-title {
       color: white;
       margin-left: 10%;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.8rem;
-      transition: 0.2s;
+      transition: 0.4s;
 
       &:hover {
         letter-spacing: 0.2rem;
@@ -70,7 +90,16 @@ const goAbout = () => {
   }
 
   .introduction {
-    height: 25rem;
+    height: 38rem;
+    padding-top: 6rem;
+
+    .avatar {
+      transition: 1s;
+
+      &:hover {
+        transform: rotateZ(360deg);
+      }
+    }
 
     .title {
       font-size: 4.4rem;
@@ -86,7 +115,49 @@ const goAbout = () => {
     .description {
       font-size: 2.4rem;
       color: #666666;
+      letter-spacing: 1rem;
     }
+  }
+}
+
+/* 显示或关闭动画*/
+.open {
+  animation: slideContentUp 0.5s linear both;
+}
+
+.close {
+  animation: slideContentDown 0.5s linear both;
+}
+
+/* 动态设置高度 */
+@keyframes slideContentUp {
+  from {
+    top: -4.5rem;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slideContentDown {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -4.5rem;
+  }
+
+}
+
+@keyframes slideContentUp {
+  from {
+    top: -4.5rem;
+  }
+
+  to {
+    top: 0;
   }
 }
 </style>

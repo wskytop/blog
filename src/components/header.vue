@@ -22,7 +22,7 @@
 <script setup>
 import { useRouter } from "vue-router"
 import { onMounted, ref, nextTick, onUnmounted } from 'vue'
-import { kyt, pmh } from '~/config/author'
+import { kyt, pmh } from '@/config/author'
 const $router = useRouter()
 const author = ref({})
 author.value = kyt

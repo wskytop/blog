@@ -18,12 +18,12 @@ import {  Search } from '@element-plus/icons-vue'
 const {nav} = useStore()
 const content = ref('')
 const dialog = ref(null)
-watch(nav,(n)=>{
-  if(n.search){
+watch(()=>nav.search,(n)=>{
+  if(n){
     dialog.value.classList.remove('disappear')
     dialog.value.classList.add('appear')
   }
-  else{
+  else {
     dialog.value.classList.remove('appear')
     dialog.value.classList.add('disappear')
   }

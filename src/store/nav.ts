@@ -11,8 +11,8 @@ export default defineStore("nav", {
     updateSearch() {
       this.search = !this.search
     },
-    updateTags(tags: boolean) {
-      this.tags = !tags
+    updateTags() {
+      this.tags = !this.tags
     }
   }
 })

@@ -8,8 +8,8 @@ export default defineStore("nav", {
     }
   },
   actions: {
-    updateSearch(search: boolean) {
-      this.search = !search
+    updateSearch() {
+      this.search = !this.search
     },
     updateTags(tags: boolean) {
       this.tags = !tags

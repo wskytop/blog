@@ -2,7 +2,7 @@
   <div class="header" :style="{ backgroundImage: 'url(' + author.bgImg + ')', backgroundSize: 'cover' }">
     <div class="banner flex-row-b" ref="banner">
       <div class="header-title pointer">
-        <div>daydayup</div>
+        <div>Blog</div>
       </div>
       <div class="tab-list flex">
         <div class="tab pointer" @click="goFont">首页</div>
@@ -103,7 +103,7 @@ onUnmounted(() => {
 
     .title {
       font-size: 4.4rem;
-      font-weight: bold;
+      font-weight: 400;
       color: white;
       transition: 0.2s;
 

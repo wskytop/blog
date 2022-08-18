@@ -1,20 +1,37 @@
 <template>
-  <div class="search-dialog">
+  <div class="search-dialog" ref="dialog">
     <el-input
+        class="search-input"
         v-model="content"
         placeholder="搜索博客"
         :suffix-icon="Search"
+        size="large"
         @change="searchBlog"
       />
-      <span class="cancel">×</span>
-  </div>
+      <span class="cancel pointer" @click="cancel">×</span></div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {ref,watch} from 'vue'
+import useStore from '@/store'
+import {  Search } from '@element-plus/icons-vue'
+const {nav} = useStore()
 const content = ref('')
-const searchBlog = ()=>{
-
+const dialog = ref(null)
+watch(nav,(n)=>{
+  if(n.search){
+    dialog.value.classList.remove('disappear')
+    dialog.value.classList.add('appear')
+  }
+  else{
+    dialog.value.classList.remove('appear')
+    dialog.value.classList.add('disappear')
+  }
+})
+const searchBlog = (content)=>{
+}
+const cancel = ()=> {
+nav.search = false
 }
 </script>
 
@@ -23,13 +40,57 @@ const searchBlog = ()=>{
   width: 46rem;
   height: 9.5rem;
   background-color: #fff;
-  position: relative;
-  .cancel{
-    height: 2.2rem;
-    width: 2.2rem;
+  position: fixed;
+  box-shadow: 0 0 0 0.05rem #dcdfe6;
+  margin:0 auto;
+  left: 0;
+  right: 0;
+  top: -10rem;
+  .search-input{
+    width: 80%;
+    height: 40%;
     position: absolute;
+    left: 0;
     top: 0;
     right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .cancel{
+    background-color: #e8e8e8;
+    line-height: 2.2rem;
+    text-align: center;
+    width: 2.2rem;
+    font-size: 2rem;
+    position: absolute;
+    top: -0.1rem;
+    right: -0.1rem;
+    &:hover{
+      background-color: #00cccc;
+    }
+  }
+}
+.appear{
+  animation: drawIn 0.4s linear both;
+}
+.disappear{
+  animation: drawOut 0.4s linear both;
+
+}
+@keyframes drawIn{
+  from{
+    top:-10rem
+  }
+  to{
+    top:30rem
+  }
+}
+@keyframes drawOut{
+  from{
+    top:30rem
+  }
+  to{
+    top:-10rem
   }
 }
 </style>

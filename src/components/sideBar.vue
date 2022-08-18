@@ -25,7 +25,7 @@ const goFont = ()=>{
 <style lang="scss">
 .side-bar {
   position:fixed;
-  right: 10rem;
+  right: 6rem;
   top: 35rem;
   width: 4.8rem;
   height: 15.9rem;

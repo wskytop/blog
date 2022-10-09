@@ -1,9 +1,9 @@
 <template>
   <div class="tags-menu" ref="tags">
     <div class="tags-list flex">
-    <div class="item">vue</div>
-    <div class="item">js</div>
-    <div class="item">css</div>
+    <div class="item pointer">vue</div>
+    <div class="item pointer">js</div>
+    <div class="item pointer">css</div>
     </div>
       <span class="cancel pointer" @click="cancel">×</span>
   </div>

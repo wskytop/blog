@@ -38,6 +38,13 @@ ul {
   display: flex;
 }
 
+.flex-row-center {
+  display: flex;
+  align-items: center;
+
+}
+
+
 .flex-col {
   display: flex;
   flex-direction: column;

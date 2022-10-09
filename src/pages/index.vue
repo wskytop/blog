@@ -6,7 +6,7 @@
   <div class="g-main">
     <router-view />
   </div>
-  <el-backtop :right="100" :bottom="100" />
+  <el-backtop :right="64" :bottom="40" />
 </template>
 <script setup lang="ts">
 import Header from '@/components/header.vue'

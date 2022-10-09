@@ -23,12 +23,18 @@ const goFont = ()=>{
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:1200px){
+  .side-bar{
+    display: none;
+  }
+}
 .side-bar {
   position:fixed;
   right: 6rem;
   top: 35rem;
   width: 4.8rem;
   height: 15.9rem;
+  z-index: 200;
   .bar {
     width: 4.8rem;
     height:4.8rem;

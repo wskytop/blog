@@ -1,13 +1,11 @@
 <template>
-  我是about
+  <ui-article :data="about"></ui-article>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import about from './about.md?raw'
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

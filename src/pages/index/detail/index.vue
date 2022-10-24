@@ -1,5 +1,10 @@
 <template>
-  <ui-article :text="content"></ui-article>
+  <ui-article
+    :text="article[index].content"
+    :data="article[index]"
+    v-title
+    :data-title="article[index].title"
+  ></ui-article>
 </template>
 
 <script setup>
@@ -9,8 +14,6 @@ import article from "@/static/article/article";
 
 const router = useRouter();
 const index = router.currentRoute.value.query.id;
-const content = ref({});
-content.value = article[index].content;
 </script>
 
 <style lang="scss" scoped></style>

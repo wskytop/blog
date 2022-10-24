@@ -79,3 +79,7 @@ ul {
 .pointer {
   cursor: pointer;
 }
+
+.mg-r-12 {
+  margin-right: 12px;
+}

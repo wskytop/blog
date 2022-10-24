@@ -22,7 +22,11 @@ VMdPreview.use(vuepressTheme, {
 const app = createApp(App);
 
 app.component("UiArticle", UiArticle);
-
+app.directive("title", {
+  mounted(el) {
+    document.title = el.dataset.title;
+  },
+});
 app
   .use(router)
   .use(createPinia())

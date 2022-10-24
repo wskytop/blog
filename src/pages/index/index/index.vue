@@ -1,58 +1,67 @@
 <template>
   <div class="wrap">
     <div class="list">
-      <div class="item" v-for="(item,index) in article" :key="index">
+      <div class="item" v-for="(item, index) in article" :key="index">
         <div class="item-header">
-          <div><span class="title">{{item.title}}</span></div>
+          <div>
+            <span class="title">{{ item.title }}</span>
+          </div>
           <span class="tag">
             <el-icon class="tag-icon">
               <LocationFilled />
             </el-icon>
-            <span class="tag-name">{{item.categories}}</span>
+            <span class="tag-name">{{ item.categories }}</span>
           </span>
         </div>
         <div class="item-content flex-row-center">
           <div class="item-content-img">
             <!-- <img src="https://image.dahuangf.com/hornet_erp/1663570119014.jpg" alt=""> -->
           </div>
-          <span class="item-content-msg" @click="goDetail(index)">{{item.description}}</span>
+          <span class="item-content-msg" @click="goDetail(index)">{{
+            item.description
+          }}</span>
         </div>
         <div class="item-footer">
           <div class="item-footer-l">
-            <el-icon color="#999" :size="15" style="position:absolute;top:6px">
+            <el-icon
+              color="#999"
+              :size="15"
+              style="position: absolute; top: 6px"
+            >
               <Calendar />
             </el-icon>
-            <span style="margin-left:20px">{{item.date}}</span>
-            <span class="item-footer-l-tag">{{item.tags}}</span>
+            <span style="margin-left: 20px">{{ item.date }}</span>
+            <span class="item-footer-l-tag">{{ item.tags }}</span>
           </div>
           <span class="item-footer-r" @click="goDetail(index)">more >></span>
         </div>
       </div>
-      <div style="text-align: center;">
-        <div style="display:inline-block;float: none;margin:30px auto">
-          <el-pagination background layout="prev, pager, next" 
-          :total="article.length" 
-          @current-change="changeCurrent"
-          @prev-click="pre"
-          @next-click="next"
+      <div style="text-align: center">
+        <div style="display: inline-block; float: none; margin: 30px auto">
+          <el-pagination
+            background
+            layout="prev, pager, next"
+            :total="article.length"
+            @current-change="changeCurrent"
+            @prev-click="pre"
+            @next-click="next"
           />
         </div>
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script setup>
-import { LocationFilled, Calendar } from '@element-plus/icons-vue'
-import article from '@/static/article/article'
-import { ref, reactive } from 'vue'
-import { useRouter } from 'vue-router'
-const $router = useRouter()
-const goDetail =(i)=>{
-  $router.push(`/detail?id=${i}`) 
-}
+import { LocationFilled, Calendar } from "@element-plus/icons-vue";
+import { ref, reactive } from "vue";
+import { useRouter } from "vue-router";
+import article from "@/static/article/article";
+
+const $router = useRouter();
+const goDetail = (i) => {
+  $router.push(`/detail?id=${i}`);
+};
 </script>
 
 <style lang="scss">
@@ -118,7 +127,7 @@ const goDetail =(i)=>{
 
         &-name {
           font-size: 14px;
-          margin-left: 2px
+          margin-left: 2px;
         }
       }
     }
@@ -219,6 +228,6 @@ const goDetail =(i)=>{
   }
 }
 .el-pagination.is-background .el-pager li:not(.is-disabled).is-active {
-  background-color:#0cc !important;
- }
+  background-color: #0cc !important;
+}
 </style>

@@ -1,5 +1,11 @@
 <template>
-  <div class="header" :style="{ backgroundImage: 'url(' + author.bgImg + ')', backgroundSize: 'cover' }">
+  <div
+    class="header"
+    :style="{
+      backgroundImage: 'url(' + author.bgImg + ')',
+      backgroundSize: 'cover',
+    }"
+  >
     <div class="banner flex-row-b" ref="banner">
       <div class="header-title pointer">
         <div>Blog</div>
@@ -20,39 +26,41 @@
   </div>
 </template>
 <script setup>
-import { useRouter } from "vue-router"
-import { onMounted, ref, nextTick, onUnmounted } from 'vue'
-import { kyt } from '@/config/author'
-const $router = useRouter()
-const author = ref({})
-author.value = kyt
+import { useRouter } from "vue-router";
+import { onMounted, ref, nextTick, onUnmounted } from "vue";
+import { kyt } from "@/config/author";
+
+const $router = useRouter();
+const author = ref({});
+author.value = kyt;
 const goFont = () => {
-  $router.push('/')
-}
+  $router.push("/");
+};
 const goAbout = () => {
-  $router.push('/about')
-}
-const banner = ref(null)
+  $router.push("/about");
+};
+const banner = ref(null);
 const changeHeight = () => {
-  let scrollHeight = document.documentElement.scrollTop || document.body.scrollTop; //滚动高度
+  const scrollHeight =
+    document.documentElement.scrollTop || document.body.scrollTop; // 滚动高度
   if (scrollHeight > 10) {
-    banner.value.classList.remove('open')
-    banner.value.classList.add('close')
+    banner.value.classList.remove("open");
+    banner.value.classList.add("close");
   } else {
-    banner.value.classList.remove('close')
-    banner.value.classList.add('open')
+    banner.value.classList.remove("close");
+    banner.value.classList.add("open");
   }
-}
+};
 onMounted(() => {
   nextTick(() => {
     window.addEventListener("scroll", changeHeight); // 监听（绑定）滚轮滚动事件
-  })
-})
+  });
+});
 onUnmounted(() => {
   nextTick(() => {
     window.removeEventListener("scroll", changeHeight); // 监听（绑定）滚轮滚动事件
-  })
-})
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -148,7 +156,6 @@ onUnmounted(() => {
   to {
     top: -4.5rem;
   }
-
 }
 
 @keyframes slideContentUp {

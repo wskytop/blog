@@ -1,35 +1,42 @@
 <template>
   <div class="side-bar flex-col">
-    <div class="search bar flex-center pointer" @click="goSearch"><i class="iconfont icon-sousuo bar-icon"></i></div>
-    <div class="tags bar flex-center pointer" @click="goTags"><i class="iconfont icon-biaoqian bar-icon"></i></div>
-    <div class="font bar flex-center pointer" @click="goFont"><i class="iconfont icon-shouye bar-icon"></i></div>
+    <div class="search bar flex-center pointer" @click="goSearch">
+      <i class="iconfont icon-sousuo bar-icon"></i>
+    </div>
+    <div class="tags bar flex-center pointer" @click="goTags">
+      <i class="iconfont icon-biaoqian bar-icon"></i>
+    </div>
+    <div class="font bar flex-center pointer" @click="goFont">
+      <i class="iconfont icon-shouye bar-icon"></i>
+    </div>
   </div>
 </template>
 
 <script setup>
-import useStore from '@/store'
-import { useRouter } from 'vue-router'
-const {nav} = useStore()
-const $router = useRouter()
-const goSearch = ()=>{
-  nav.updateSearch()
-}
-const goTags = ()=>{
-  nav.updateTags()
-}
-const goFont = ()=>{
-  $router.push('/')
-}
+import { useRouter } from "vue-router";
+import useStore from "@/store";
+
+const { nav } = useStore();
+const $router = useRouter();
+const goSearch = () => {
+  nav.updateSearch();
+};
+const goTags = () => {
+  nav.updateTags();
+};
+const goFont = () => {
+  $router.push("/");
+};
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width:1200px){
-  .side-bar{
+@media screen and (max-width: 1200px) {
+  .side-bar {
     display: none;
   }
 }
 .side-bar {
-  position:fixed;
+  position: fixed;
   right: 6rem;
   top: 35rem;
   width: 4.8rem;
@@ -37,19 +44,17 @@ const goFont = ()=>{
   z-index: 200;
   .bar {
     width: 4.8rem;
-    height:4.8rem;
+    height: 4.8rem;
     border-radius: 50%;
     background-color: #00cccc;
     color: #fff;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 0.4rem;
-
     }
-   &-icon{
-font-size: 2.5rem;
-font-weight: 500;
-   }
-    
+    &-icon {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
   }
 }
 </style>

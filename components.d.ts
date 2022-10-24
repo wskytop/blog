@@ -19,7 +19,4 @@ declare module '@vue/runtime-core' {
     SideBar: typeof import('./src/components/sideBar.vue')['default']
     Tags: typeof import('./src/components/tags.vue')['default']
   }
-  export interface ComponentCustomProperties {
-    vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']
-  }
 }

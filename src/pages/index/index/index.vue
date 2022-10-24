@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <div class="list">
-      <div class="item" v-for="(item, index) in article" :key="index">
+      <div class="item" v-for="(item, index) in showData" :key="index">
         <div class="item-header">
           <div>
             <span class="title">{{ item.title }}</span>
@@ -43,8 +43,6 @@
             layout="prev, pager, next"
             :total="article.length"
             @current-change="changeCurrent"
-            @prev-click="pre"
-            @next-click="next"
           />
         </div>
       </div>
@@ -59,8 +57,16 @@ import { useRouter } from "vue-router";
 import article from "@/static/article/article";
 
 const $router = useRouter();
+
+const showData = ref({});
+const current = ref(1);
+showData.value = article.slice(0, 10);
+const changeCurrent = (cur, a, b) => {
+  current.value = cur;
+  showData.value = article.slice((cur - 1) * 10, cur * 10);
+};
 const goDetail = (i) => {
-  $router.push(`/detail?id=${i}`);
+  $router.push(`/detail?id=${i + (current.value - 1) * 10}`);
 };
 </script>
 

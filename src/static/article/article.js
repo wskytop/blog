@@ -38,6 +38,27 @@ export default [
     content: article_3,
   },
   {
+    title: "JavaScript面试题",
+    date: "2022-03-03 17:00:00",
+    tags: "JavaScript",
+    categories: "面经",
+    content: article_4,
+  },
+  {
+    title: "vue面试题",
+    date: "2022-03-03 17:00:00",
+    tags: "vue",
+    categories: "面经",
+    content: article_5,
+  },
+  {
+    title: "git常用命令",
+    date: "2022-03-03 17:00:00",
+    tags: "git",
+    categories: "面经",
+    content: article_6,
+  },
+  {
     title: "Vue3 新特性",
     date: "2022-03-02 17:00:00",
     tags: "Vue",
@@ -45,5 +66,40 @@ export default [
     content: article_7,
     description:
       "Vue3快速上手 1.Vue3简介 2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王） 耗时2年多、2600+次提交、30+个RFC、600+次PR、99位贡献者 github上的tags地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0 2.Vue3带来了什么",
+  },
+  {
+    title: "vue2面试题",
+    date: "2022-03-03 17:00:00",
+    tags: "vue",
+    categories: "面经",
+    content: article_8,
+  },
+  {
+    title: "js手撕代码",
+    date: "2022-03-03 17:00:00",
+    tags: "JavaScript",
+    categories: "面经",
+    content: article_9,
+  },
+  {
+    title: "listNode",
+    date: "2022-03-03 17:00:00",
+    tags: "code",
+    categories: "面经",
+    content: article_10,
+  },
+  {
+    title: "promise手撕代码",
+    date: "2022-03-03 17:00:00",
+    tags: "JavaScript",
+    categories: "面经",
+    content: article_11,
+  },
+  {
+    title: "webpack面试题",
+    date: "2022-03-03 17:00:00",
+    tags: "webpack",
+    categories: "面经",
+    content: article_12,
   },
 ];

@@ -3,8 +3,11 @@
     <div class="search bar flex-center pointer" @click="goSearch">
       <i class="iconfont icon-sousuo bar-icon"></i>
     </div>
-    <div class="tags bar flex-center pointer" @click="goTags">
+    <!-- <div class="tags bar flex-center pointer" @click="goTags">
       <i class="iconfont icon-biaoqian bar-icon"></i>
+    </div> -->
+    <div class="tags bar flex-center pointer" @click="reset">
+      <i class="iconfont icon-chongzhi bar-icon"></i>
     </div>
     <div class="font bar flex-center pointer" @click="goFont">
       <i class="iconfont icon-shouye bar-icon"></i>
@@ -23,6 +26,9 @@ const goSearch = () => {
 };
 const goTags = () => {
   nav.updateTags();
+};
+const reset = () => {
+  nav.searchContent = "";
 };
 const goFont = () => {
   $router.push("/");

@@ -17,7 +17,7 @@
     </div>
     <div class="introduction flex-col-a">
       <div class="avatar pointer">
-        <el-avatar :size="128" :src="author.avatar" />
+        <img class="avatar-img" :src="author.avatar" />
       </div>
       <div class="title pointer">{{ author.name }}</div>
       <div class="description pointer">{{ author.description }}</div>
@@ -29,7 +29,9 @@
 import { useRouter } from "vue-router";
 import { onMounted, ref, nextTick, onUnmounted } from "vue";
 import { kyt } from "@/config/author";
+import { useHandler } from "@/static/hooks";
 
+const { isMobile, per } = useHandler();
 const $router = useRouter();
 const author = ref({});
 author.value = kyt;
@@ -106,6 +108,10 @@ onUnmounted(() => {
 
       &:hover {
         transform: rotateZ(360deg);
+      }
+      &-img {
+        width: 12.8rem;
+        border-radius: 50%;
       }
     }
 

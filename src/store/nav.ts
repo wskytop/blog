@@ -5,6 +5,8 @@ export default defineStore("nav", {
     return {
       search: false,
       tags: false,
+      searchContent: "",
+      tagsContent: "",
     };
   },
   actions: {

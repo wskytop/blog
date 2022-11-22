@@ -2,22 +2,25 @@
   <div class="search-dialog" ref="dialog">
     <el-input
       class="search-input"
+      ref="search"
       v-model="content"
       placeholder="搜索博客"
       :suffix-icon="Search"
       size="large"
       @change="searchBlog"
+      autofocus
     />
     <span class="cancel pointer" @click="cancel">×</span>
   </div>
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { Search } from "@element-plus/icons-vue";
 import useStore from "@/store";
 
 const { nav } = useStore();
+const search = ref(null);
 const content = ref("");
 const dialog = ref(null);
 watch(
@@ -26,15 +29,20 @@ watch(
     if (n) {
       dialog.value.classList.remove("disappear");
       dialog.value.classList.add("appear");
+      search.value.focus();
     } else {
       dialog.value.classList.remove("appear");
       dialog.value.classList.add("disappear");
     }
   }
 );
-const searchBlog = (content) => {};
 const cancel = () => {
   nav.search = false;
+  content.value = "";
+};
+const searchBlog = (text) => {
+  nav.searchContent = text;
+  cancel();
 };
 </script>
 
@@ -49,6 +57,7 @@ const cancel = () => {
   left: 0;
   right: 0;
   top: -10rem;
+  z-index: 9999;
   .search-input {
     width: 80%;
     height: 40%;

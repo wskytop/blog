@@ -1,13 +1,13 @@
 <template>
   <div class="wrap">
-    <div class="list">
+    <div class="list" v-loading="listLoading">
       <div class="item" v-for="(item, index) in showData" :key="index">
         <div class="item-header">
           <div>
             <span class="title">{{ item.title }}</span>
           </div>
           <span class="tag">
-            <el-icon class="tag-icon">
+            <el-icon>
               <LocationFilled />
             </el-icon>
             <span class="tag-name">{{ item.categories }}</span>
@@ -15,7 +15,9 @@
         </div>
         <div class="item-content flex-row-center">
           <div class="item-content-img">
-            <!-- <img src="https://image.dahuangf.com/hornet_erp/1663570119014.jpg" alt=""> -->
+            <img
+              src="https://image.dahuangf.com/hornet_erp/1666598296426.jpg"
+            />
           </div>
           <span class="item-content-msg" @click="goDetail(index)">{{
             item.description
@@ -26,25 +28,25 @@
             <el-icon
               color="#999"
               :size="15"
-              style="position: absolute; top: 6px"
+              style="vertical-align: -0.1em; margin-right: 0.6rem"
             >
               <Calendar />
             </el-icon>
-            <span style="margin-left: 20px">{{ item.date }}</span>
-            <span class="item-footer-l-tag">{{ item.tags }}</span>
+            <span>{{ item.date }}</span>
+            <!-- <span class="item-footer-l-tag">{{ item.tags }}</span> -->
           </div>
           <span class="item-footer-r" @click="goDetail(index)">more >></span>
         </div>
       </div>
-      <div style="text-align: center">
-        <div style="display: inline-block; float: none; margin: 30px auto">
-          <el-pagination
-            background
-            layout="prev, pager, next"
-            :total="article.length"
-            @current-change="changeCurrent"
-          />
-        </div>
+    </div>
+    <div style="text-align: center">
+      <div style="display: inline-block; float: none; margin: 30px auto">
+        <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="showLength"
+          @current-change="changeCurrent"
+        />
       </div>
     </div>
   </div>
@@ -52,14 +54,35 @@
 
 <script setup>
 import { LocationFilled, Calendar } from "@element-plus/icons-vue";
-import { ref, reactive } from "vue";
+import { ref, reactive, watch } from "vue";
 import { useRouter } from "vue-router";
+import useStore from "@/store";
 import article from "@/static/article/article";
 
 const $router = useRouter();
-
+const listLoading = ref(false);
+const { nav } = useStore();
+// 展示的数据
 const showData = ref({});
+// 当前页码
 const current = ref(1);
+const showLength = ref(article.length);
+// 监听搜索条件的变化
+watch(
+  () => nav.searchContent,
+  (n) => {
+    listLoading.value = true;
+    setTimeout(() => {
+      const list = article.filter((i) => {
+        const reg = new RegExp(nav.searchContent);
+        return reg.test(i.title);
+      });
+      showLength.value = list.length;
+      showData.value = list.slice(0, 10);
+      listLoading.value = false;
+    }, 300);
+  }
+);
 showData.value = article.slice(0, 10);
 const changeCurrent = (cur, a, b) => {
   current.value = cur;
@@ -127,10 +150,6 @@ const goDetail = (i) => {
           border-left: 10px solid #099;
         }
 
-        &-icon {
-          transform: translateY(1px);
-        }
-
         &-name {
           font-size: 14px;
           margin-left: 2px;
@@ -151,10 +170,12 @@ const goDetail = (i) => {
         width: 30rem;
         height: 15rem;
         margin-right: 20px;
+        margin-left: 5px;
         flex-shrink: 0;
-        // img{
-        //   width:30rem
-        // }
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       &-msg {
@@ -175,7 +196,6 @@ const goDetail = (i) => {
       align-items: center;
 
       &-l {
-        position: relative;
         color: #999;
 
         &-tag {

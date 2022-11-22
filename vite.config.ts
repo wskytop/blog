@@ -13,6 +13,7 @@ export default defineConfig({
     Pages({
       exclude: ["**/components/*.vue"],
     }),
+    // 按需引入element插件
     AutoImport({
       resolvers: [ElementPlusResolver()],
     }),
@@ -33,8 +34,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),
-        // supplierV1: path.resolve(__dirname, 'supplierV1.html'),
-        // codeLinkV1: path.resolve(__dirname, 'codeLinkV1.html'),
       },
       output: {
         manualChunks(id) {
@@ -55,13 +54,6 @@ export default defineConfig({
     hmr: {
       host: "127.0.0.1",
       port: 8080,
-    },
-    proxy: {
-      "/api": {
-        target: "http://localhost:3333",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
     },
   },
   optimizeDeps: {

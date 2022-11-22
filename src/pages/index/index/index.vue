@@ -7,9 +7,7 @@
             <span class="title">{{ item.title }}</span>
           </div>
           <span class="tag">
-            <el-icon>
-              <LocationFilled />
-            </el-icon>
+            <el-icon :size="10"><Notebook /></el-icon>
             <span class="tag-name">{{ item.categories }}</span>
           </span>
         </div>
@@ -35,7 +33,7 @@
             <span>{{ item.date }}</span>
             <!-- <span class="item-footer-l-tag">{{ item.tags }}</span> -->
           </div>
-          <span class="item-footer-r" @click="goDetail(index)">more >></span>
+          <span class="item-footer-r" @click="goDetail(item)">more >></span>
         </div>
       </div>
     </div>
@@ -53,7 +51,7 @@
 </template>
 
 <script setup>
-import { LocationFilled, Calendar } from "@element-plus/icons-vue";
+import { Notebook, Calendar } from "@element-plus/icons-vue";
 import { ref, reactive, watch } from "vue";
 import { useRouter } from "vue-router";
 import useStore from "@/store";
@@ -88,8 +86,8 @@ const changeCurrent = (cur, a, b) => {
   current.value = cur;
   showData.value = article.slice((cur - 1) * 10, cur * 10);
 };
-const goDetail = (i) => {
-  $router.push(`/detail?id=${i + (current.value - 1) * 10}`);
+const goDetail = (item) => {
+  $router.push(`/detail?id=${item.id}`);
 };
 </script>
 

@@ -16,34 +16,34 @@
 </template>
 
 <script setup>
-import { useRouter } from "vue-router";
-import useStore from "@/store";
+import { useRouter } from 'vue-router'
+import useStore from '@/store'
 
-const { nav } = useStore();
-const $router = useRouter();
+const { nav } = useStore()
+const $router = useRouter()
 const goSearch = () => {
-  nav.updateSearch();
-};
+  nav.updateSearch()
+}
 const goTags = () => {
-  nav.updateTags();
-};
+  nav.updateTags()
+}
 const reset = () => {
-  nav.searchContent = "";
-};
+  nav.searchContent = ''
+}
 const goFont = () => {
-  $router.push("/w-blog/");
-};
+  $router.push('/w-blog/')
+}
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 750px) {
   .side-bar {
     display: none;
   }
 }
 .side-bar {
   position: fixed;
-  right: 6rem;
+  right: 4rem;
   top: 35rem;
   width: 4.8rem;
   height: 15.9rem;

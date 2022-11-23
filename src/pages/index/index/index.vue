@@ -114,12 +114,12 @@ const goDetail = (item) => {
       position: relative;
 
       .title {
-        font-size: 1.8em;
+        font-size: 18px;
         display: block;
         padding: 7px 80px 7px 15px;
         border-left: 4px solid #0cc;
         color: #444;
-        line-height: 1.1em;
+        line-height: 1.1rem;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
 
@@ -195,8 +195,8 @@ const goDetail = (item) => {
 
     &-footer {
       box-sizing: border-box;
-      font-size: 1.4em;
-      line-height: 1.6em;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
       padding: 15px;
       display: flex;
       justify-content: space-between;
@@ -253,7 +253,7 @@ const goDetail = (item) => {
         -webkit-transition: all 0.1s;
         transition: all 0.1s;
         display: inline-block;
-        line-height: 1em;
+        line-height: 1rem;
         cursor: pointer;
         color: #fff !important;
       }

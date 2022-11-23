@@ -15,35 +15,35 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch } from "vue";
-import { Search } from "@element-plus/icons-vue";
-import useStore from "@/store";
+import { onMounted, ref, watch } from 'vue'
+import { Search } from '@element-plus/icons-vue'
+import useStore from '@/store'
 
-const { nav } = useStore();
-const search = ref(null);
-const content = ref("");
-const dialog = ref(null);
+const { nav } = useStore()
+const search = ref(null)
+const content = ref('')
+const dialog = ref(null)
 watch(
   () => nav.search,
   (n) => {
     if (n) {
-      dialog.value.classList.remove("disappear");
-      dialog.value.classList.add("appear");
-      search.value.focus();
+      dialog.value.classList.remove('disappear')
+      dialog.value.classList.add('appear')
+      search.value.focus()
     } else {
-      dialog.value.classList.remove("appear");
-      dialog.value.classList.add("disappear");
+      dialog.value.classList.remove('appear')
+      dialog.value.classList.add('disappear')
     }
   }
-);
+)
 const cancel = () => {
-  nav.search = false;
-  content.value = "";
-};
+  nav.search = false
+  content.value = ''
+}
 const searchBlog = (text) => {
-  nav.searchContent = text;
-  cancel();
-};
+  nav.searchContent = text
+  cancel()
+}
 </script>
 
 <style lang="scss" scoped>

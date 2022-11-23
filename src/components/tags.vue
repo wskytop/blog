@@ -10,26 +10,26 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
-import useStore from "@/store";
+import { ref, watch } from 'vue'
+import useStore from '@/store'
 
-const { nav } = useStore();
-const tags = ref(null);
+const { nav } = useStore()
+const tags = ref(null)
 watch(
   () => nav.tags,
   (n) => {
     if (n) {
-      tags.value.classList.remove("down");
-      tags.value.classList.add("up");
+      tags.value.classList.remove('down')
+      tags.value.classList.add('up')
     } else {
-      tags.value.classList.remove("up");
-      tags.value.classList.add("down");
+      tags.value.classList.remove('up')
+      tags.value.classList.add('down')
     }
   }
-);
+)
 const cancel = () => {
-  nav.tags = false;
-};
+  nav.tags = false
+}
 </script>
 
 <style lang="scss" scoped>

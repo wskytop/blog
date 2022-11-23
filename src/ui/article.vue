@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="content-wrap">
-      <div class="header">
+      <div v-if="data" class="header">
         <h3 class="title">{{ data.title }}</h3>
         <div class="msg flex-center">
           <!-- <div class="tags mg-r-12">

@@ -1,5 +1,5 @@
 <template>
-  <ui-article :data="about"></ui-article>
+  <ui-article :text="about"></ui-article>
 </template>
 
 <script setup>

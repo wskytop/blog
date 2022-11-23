@@ -12,7 +12,7 @@
           </span>
         </div>
         <div class="item-content flex-row-center">
-          <div class="item-content-img">
+          <div v-if="!isMobile" class="item-content-img">
             <img
               src="https://image.dahuangf.com/hornet_erp/1666598296426.jpg"
             />
@@ -51,44 +51,47 @@
 </template>
 
 <script setup>
-import { Notebook, Calendar } from "@element-plus/icons-vue";
-import { ref, reactive, watch } from "vue";
-import { useRouter } from "vue-router";
-import useStore from "@/store";
-import article from "@/static/article/article";
+import { Notebook, Calendar } from '@element-plus/icons-vue'
+import { ref, reactive, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import useStore from '@/store'
+import article from '@/static/article/article'
+import { useHandler } from '@/static/hooks'
 
-const $router = useRouter();
-const listLoading = ref(false);
-const { nav } = useStore();
+const $router = useRouter()
+const { isMobile } = useHandler()
+const listLoading = ref(false)
+const { nav } = useStore()
 // 展示的数据
-const showData = ref({});
+const showData = ref({})
 // 当前页码
-const current = ref(1);
-const showLength = ref(article.length);
+const current = ref(1)
+const showLength = ref(article.length)
 // 监听搜索条件的变化
 watch(
   () => nav.searchContent,
   (n) => {
-    listLoading.value = true;
+    listLoading.value = true
     setTimeout(() => {
       const list = article.filter((i) => {
-        const reg = new RegExp(nav.searchContent);
-        return reg.test(i.title);
-      });
-      showLength.value = list.length;
-      showData.value = list.slice(0, 10);
-      listLoading.value = false;
-    }, 300);
+        const reg = new RegExp(nav.searchContent)
+        return reg.test(i.title)
+      })
+      showLength.value = list.length
+      showData.value = list.slice(0, 10)
+      listLoading.value = false
+    }, 300)
   }
-);
-showData.value = article.slice(0, 10);
+)
+showData.value = article.slice(0, 10)
+console.log(showData.value[4].content)
 const changeCurrent = (cur, a, b) => {
-  current.value = cur;
-  showData.value = article.slice((cur - 1) * 10, cur * 10);
-};
+  current.value = cur
+  showData.value = article.slice((cur - 1) * 10, cur * 10)
+}
 const goDetail = (item) => {
-  $router.push(`/w-blog/detail?id=${item.id}`);
-};
+  $router.push(`/w-blog/detail?id=${item.id}`)
+}
 </script>
 
 <style lang="scss">
@@ -141,7 +144,7 @@ const goDetail = (item) => {
 
         &:after {
           position: absolute;
-          content: "";
+          content: '';
           top: 34px;
           right: 0;
           border-bottom: 10px solid transparent;
@@ -182,6 +185,12 @@ const goDetail = (item) => {
         -webkit-line-clamp: 3;
         overflow: hidden;
       }
+      .mobile {
+        padding: 0;
+        &-img {
+          display: none;
+        }
+      }
     }
 
     &-footer {
@@ -210,7 +219,7 @@ const goDetail = (item) => {
           margin: 5px 10px 5px 18px;
 
           &:before {
-            content: " ";
+            content: ' ';
             width: 0px;
             height: 0px;
             position: absolute;
@@ -221,7 +230,7 @@ const goDetail = (item) => {
           }
 
           &:after {
-            content: " ";
+            content: ' ';
             width: 4px;
             height: 4px;
             background-color: #fff;

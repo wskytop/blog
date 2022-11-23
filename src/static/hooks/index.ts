@@ -1,26 +1,19 @@
-import { onMounted, onUnmounted, ref } from "vue";
-
+import { onMounted, onUnmounted, ref } from 'vue'
+import tools from '../utils/tools'
 export const useHandler = () => {
-  const isMobile = ref(true);
-  const domWidth =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  const isMobileMth = () => {
-    return domWidth <= 750;
-  };
+  const isMobile = ref(tools.isMobile())
   const onResize = () => {
-    isMobile.value = isMobileMth();
-  };
+    isMobile.value = tools.isMobile()
+  }
 
   onMounted(() => {
-    window.addEventListener("resize", onResize);
-  });
+    window.addEventListener('resize', onResize)
+  })
   onUnmounted(() => {
-    window.removeEventListener("resize", onResize);
-  });
+    window.removeEventListener('resize', onResize)
+  })
 
   return {
-    isMobile,
-  };
-};
+    isMobile
+  }
+}

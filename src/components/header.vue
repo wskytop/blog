@@ -29,9 +29,6 @@
 import { useRouter } from "vue-router";
 import { onMounted, ref, nextTick, onUnmounted } from "vue";
 import { kyt } from "@/config/author";
-import { useHandler } from "@/static/hooks";
-
-const { isMobile, per } = useHandler();
 const $router = useRouter();
 const author = ref({});
 author.value = kyt;

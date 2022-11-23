@@ -30,7 +30,7 @@ export default defineConfig({
     }
   },
   build: {
-    brotliSize: false,
+    // brotliSize: false,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {

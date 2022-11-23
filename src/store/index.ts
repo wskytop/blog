@@ -1,7 +1,7 @@
-import useNav from "./nav";
+import useNav from './nav'
 
 export default function useStore() {
   return {
-    nav: useNav(),
-  };
+    nav: useNav()
+  }
 }

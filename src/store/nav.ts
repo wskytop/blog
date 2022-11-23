@@ -1,20 +1,20 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export default defineStore("nav", {
+export default defineStore('nav', {
   state: () => {
     return {
       search: false,
       tags: false,
-      searchContent: "",
-      tagsContent: "",
-    };
+      searchContent: '',
+      tagsContent: ''
+    }
   },
   actions: {
     updateSearch() {
-      this.search = !this.search;
+      this.search = !this.search
     },
     updateTags() {
-      this.tags = !this.tags;
-    },
-  },
-});
+      this.tags = !this.tags
+    }
+  }
+})

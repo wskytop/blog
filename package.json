@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.9",
@@ -12,6 +13,7 @@
     "axios": "^1.1.2",
     "element-plus": "^2.2.13",
     "pinia": "^2.0.18",
+    "prismjs": "^1.29.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },

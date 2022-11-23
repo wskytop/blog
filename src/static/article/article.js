@@ -52,6 +52,8 @@ const articles = [
   }
 ].map((i) => {
   const data = formatMd(i.content)
+  const index = i.content.indexOf('---', 10)
+  i.content = i.content.substring(index + 3)
   id += 1
   return {
     ...i,

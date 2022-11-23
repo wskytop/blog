@@ -8,7 +8,7 @@
           </div>
           <span class="tag">
             <el-icon :size="10"><Notebook /></el-icon>
-            <span class="tag-name">{{ item.categories }}</span>
+            <span class="tag-name">{{ item.tags }}</span>
           </span>
         </div>
         <div class="item-content flex-row-center">
@@ -84,7 +84,7 @@ watch(
   }
 )
 showData.value = article.slice(0, 10)
-console.log(showData.value[4].content)
+// console.log(showData.value[4].content)
 const changeCurrent = (cur, a, b) => {
   current.value = cur
   showData.value = article.slice((cur - 1) * 10, cur * 10)

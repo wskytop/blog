@@ -31,7 +31,7 @@ const reset = () => {
   nav.searchContent = "";
 };
 const goFont = () => {
-  $router.push("/");
+  $router.push("/w-blog/");
 };
 </script>
 

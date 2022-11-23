@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import routes from "~pages";
+routes[0].path = "/w-blog";
 
 const router = createRouter({
   history: createWebHistory(),

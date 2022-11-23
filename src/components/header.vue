@@ -36,10 +36,10 @@ const $router = useRouter();
 const author = ref({});
 author.value = kyt;
 const goFont = () => {
-  $router.push("/");
+  $router.push("/w-blog/");
 };
 const goAbout = () => {
-  $router.push("/about");
+  $router.push("/w-blog/about");
 };
 const banner = ref(null);
 const changeHeight = () => {

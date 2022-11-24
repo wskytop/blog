@@ -24,7 +24,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "yarn run lint-staged:js",
-    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+    "!(path/to/excluded/dir/**/*)*.ts": [
+      "eslint --fix",
       "prettier --write"
     ]
   },

@@ -5,10 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
-    "lint-staged": "lint-staged --allow-empty",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-    "prepare": "husky install"
+    "lint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.9",
@@ -22,15 +19,7 @@
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": "yarn run lint-staged:js",
-    "!(path/to/excluded/dir/**/*)*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "devDependencies": {
-    "lint-staged": "^13.0.3",
     "@types/node": "^18.11.4",
     "@types/prismjs": "^1.26.0",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
@@ -42,7 +31,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.2.0",
-    "husky": "^8.0.0",
     "prettier": "^2.7.1",
     "sass": "^1.54.4",
     "typescript": "^4.6.4",

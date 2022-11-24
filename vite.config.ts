@@ -30,7 +30,6 @@ export default defineConfig({
     }
   },
   build: {
-    // brotliSize: false,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {
@@ -45,6 +44,7 @@ export default defineConfig({
               .split('/')[0]
               .toString()
           }
+          return ''
         }
       }
     },

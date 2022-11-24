@@ -16,10 +16,10 @@
 import { reactive, ref } from 'vue'
 
 const imgs = reactive([
-  './imgs/1/demo1_1.jpg',
-  './imgs/1/demo1_2.jpg',
-  './imgs/1/demo1_3.jpg',
-  './imgs/1/demo1_4.jpg'
+  '/imgs/demo/1/demo1_1.jpg',
+  '/imgs/demo/1/demo1_2.jpg',
+  '/imgs/demo/1/demo1_3.jpg',
+  '/imgs/demo/1/demo1_4.jpg'
 ])
 const current = ref(0)
 </script>

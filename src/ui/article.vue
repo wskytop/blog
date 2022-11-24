@@ -4,9 +4,6 @@
       <div v-if="data" class="header">
         <h3 class="title">{{ data.title }}</h3>
         <div class="msg flex-center">
-          <!-- <div class="tags mg-r-12">
-            <el-icon class="icon"><Notebook /></el-icon>{{ data.tags }}
-          </div> -->
           <div class="date">
             <el-icon class="icon"><Calendar /></el-icon>{{ data.date }}
           </div>
@@ -22,7 +19,7 @@
   </div>
 </template>
 <script setup>
-import { Notebook, Calendar } from '@element-plus/icons-vue'
+import { Calendar } from '@element-plus/icons-vue'
 
 defineProps({
   text: {

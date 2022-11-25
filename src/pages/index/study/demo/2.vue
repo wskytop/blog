@@ -33,7 +33,8 @@ const list = reactive([
 ])
 const process = ref('0')
 const handleChange = (bool) => {
-  list[current.value].cur = bool
+  const pre = current.value
+  list[pre].cur = bool
   current.value = bool
     ? current.value + 1 < list.length
       ? current.value + 1
@@ -41,7 +42,8 @@ const handleChange = (bool) => {
     : current.value - 1 > 0
     ? current.value - 1
     : 0
-  process.value = `${current.value * 15}rem`
+  process.value = `${(bool ? current.value - 1 : current.value) * 15}rem`
+  if (bool && pre + 1 == list.length) process.value = `${current.value * 15}rem`
 }
 </script>
 

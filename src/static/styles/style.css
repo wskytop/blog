@@ -63,6 +63,13 @@ ul {
   justify-content: space-around;
 }
 
+.flex-col-e {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .flex-col-b {
   display: flex;
   flex-direction: column;

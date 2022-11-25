@@ -22,12 +22,14 @@
           <div class="tab pointer" @click="goAbout">关于</div>
         </div>
       </div>
-      <div class="introduction flex-col-a">
+      <div class="introduction flex-col-e">
         <div class="avatar pointer">
           <img class="avatar-img" :src="author.avatar" />
         </div>
         <div class="title pointer">{{ author.name }}</div>
-        <div class="description pointer">{{ author.description }}</div>
+        <div v-if="!isMobile" class="description pointer">
+          {{ author.description }}
+        </div>
         <!-- <div class="myOthers"></div> -->
       </div>
       <div class="quotation">
@@ -52,6 +54,12 @@ import { onMounted, ref, nextTick, onUnmounted, computed } from 'vue'
 import axios from 'axios'
 import { kyt } from '@/config/author'
 
+defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false
+  }
+})
 const quotation = ref('')
 const getQuotation = async () => {
   axios.get('https://api.uixsj.cn/hitokoto/get?type=social').then((result) => {
@@ -173,8 +181,9 @@ onUnmounted(() => {
   color: white;
   font-size: 1.6rem;
   text-align: center;
+  overflow: hidden;
   &-msg {
-    width: auto;
+    width: 100%;
     white-space: nowrap;
     padding-left: 105%;
     letter-spacing: 0.4rem;

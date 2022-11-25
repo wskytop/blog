@@ -7,7 +7,7 @@
             <span class="title">{{ item.title }}</span>
           </div>
           <span class="tag">
-            <el-icon :size="10"><Notebook /></el-icon>
+            <el-icon v-if="!isMobile" :size="10"><Notebook /></el-icon>
             <span class="tag-name">{{ item.tags }}</span>
           </span>
         </div>
@@ -26,14 +26,16 @@
             <el-icon
               color="#999"
               :size="15"
-              style="vertical-align: -0.1em; margin-right: 0.6rem"
+              style="vertical-align: -0.1rem; margin-right: 0.6rem"
             >
               <Calendar />
             </el-icon>
             <span>{{ item.date }}</span>
             <!-- <span class="item-footer-l-tag">{{ item.tags }}</span> -->
           </div>
-          <span class="item-footer-r" @click="goDetail(item)">more >></span>
+          <span class="item-footer-r" @click="goDetail(item)"
+            >more<span v-if="!isMobile"> >></span></span
+          >
         </div>
       </div>
     </div>
@@ -247,7 +249,7 @@ const goDetail = (item) => {
         padding: 8px 20px;
         text-align: center;
         border: 0;
-        border-radius: 0;
+        border-radius: 0.2rem;
         background: #0cc;
         box-shadow: 0 3px 10px rgb(0 0 0 / 6%), 0 3px 10px rgb(0 0 0 / 13%);
         -webkit-transition: all 0.1s;

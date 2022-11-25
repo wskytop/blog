@@ -31,7 +31,7 @@ const $router = useRouter()
 const { isMobile } = useHandler()
 
 // 展示的数据
-const list = reactive(['Expanding Cards'])
+const list = reactive(['Expanding Cards', 'Process'])
 const goDetail = (index) => {
   $router.push(`/w-blog/study/demo/${index + 1}?hide=true`)
 }

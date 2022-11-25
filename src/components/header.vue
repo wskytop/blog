@@ -30,9 +30,9 @@
         <div class="description pointer">{{ author.description }}</div>
         <!-- <div class="myOthers"></div> -->
       </div>
-      <!-- <div class="quotation">
+      <div class="quotation">
         <span class="quotation-msg">{{ quotation }}</span>
-      </div> -->
+      </div>
     </div>
     <div v-else class="banner flex-row-b black" ref="banner">
       <div class="header-title pointer">
@@ -49,19 +49,16 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref, nextTick, onUnmounted, computed } from 'vue'
-// import axios from 'axios'
+import axios from 'axios'
 import { kyt } from '@/config/author'
 
-// const quotation = ref('')
-// const getQuotation = async () => {
-//   axios.get('https://api.uixsj.cn/hitokoto/get?type=social').then((result) => {
-//     if (result.status == 200) quotation.value = result.data
-//   })
-// }
-// getQuotation()
-// setInterval(() => {
-//   getQuotation()
-// }, 10000)
+const quotation = ref('')
+const getQuotation = async () => {
+  axios.get('https://api.uixsj.cn/hitokoto/get?type=social').then((result) => {
+    if (result.status == 200) quotation.value = result.data
+  })
+}
+getQuotation()
 const $router = useRouter()
 const author = ref({})
 author.value = kyt
@@ -180,9 +177,10 @@ onUnmounted(() => {
     width: auto;
     white-space: nowrap;
     padding-left: 105%;
-    padding-right: 150%;
+    letter-spacing: 0.4rem;
+    padding-right: 100%;
     display: block;
-    animation: autoScroll 10s infinite linear;
+    animation: autoScroll 8s infinite linear;
     transition: 3s;
   }
 }

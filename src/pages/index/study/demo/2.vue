@@ -1,4 +1,7 @@
 <template>
+  <div class="date">
+    <el-icon class="icon"><Calendar /></el-icon>2022/11/24
+  </div>
   <div class="demo">
     <div class="process">
       <div class="line"></div>
@@ -19,6 +22,7 @@
 </template>
 
 <script setup>
+import { Calendar } from '@element-plus/icons-vue'
 import { reactive, ref } from 'vue'
 
 const current = ref(0)
@@ -42,6 +46,16 @@ const handleChange = (bool) => {
 </script>
 
 <style lang="scss" scoped>
+.date {
+  margin: 3rem auto;
+  margin-top: 0;
+  color: #999;
+  text-align: center;
+  font-size: 1.6rem;
+  .icon {
+    margin-right: 1rem;
+  }
+}
 .demo {
   margin: 0 auto;
   width: 40rem;
@@ -81,6 +95,7 @@ const handleChange = (bool) => {
       box-sizing: border-box;
     }
     .cicle {
+      transition: 1s;
       background-color: #fff;
       width: 10rem;
       height: 10rem;

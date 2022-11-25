@@ -5,7 +5,9 @@
         <div class="item-header">
           <div class="flex-row-b">
             <span class="title">{{ item }}</span>
-            <span class="title-more" @click="goDetail(index)">more >></span>
+            <span class="title-more" @click="goDetail(index)"
+              ><span v-if="!isMobile">more </span>>></span
+            >
           </div>
         </div>
         <!-- <div class="item-content flex-row-center">
@@ -23,8 +25,11 @@
 <script setup>
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import { useHandler } from '@/static/hooks'
 
 const $router = useRouter()
+const { isMobile } = useHandler()
+
 // 展示的数据
 const list = reactive(['Expanding Cards'])
 const goDetail = (index) => {
@@ -52,6 +57,7 @@ const goDetail = (index) => {
       position: relative;
 
       .title {
+        white-space: nowrap;
         font-size: 18px;
         display: block;
         padding: 7px 80px 7px 15px;
@@ -66,6 +72,7 @@ const goDetail = (index) => {
           padding-left: 8px;
         }
         &-more {
+          white-space: nowrap;
           padding: 8px 20px;
           text-align: center;
           border: 0;

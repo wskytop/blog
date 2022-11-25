@@ -197,7 +197,7 @@ const goDetail = (item) => {
 
     &-footer {
       box-sizing: border-box;
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 1.6rem;
       padding: 15px;
       display: flex;

@@ -30,6 +30,9 @@
         <div class="description pointer">{{ author.description }}</div>
         <!-- <div class="myOthers"></div> -->
       </div>
+      <!-- <div class="quotation">
+        <span class="quotation-msg">{{ quotation }}</span>
+      </div> -->
     </div>
     <div v-else class="banner flex-row-b black" ref="banner">
       <div class="header-title pointer">
@@ -46,8 +49,19 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref, nextTick, onUnmounted, computed } from 'vue'
+// import axios from 'axios'
 import { kyt } from '@/config/author'
 
+// const quotation = ref('')
+// const getQuotation = async () => {
+//   axios.get('https://api.uixsj.cn/hitokoto/get?type=social').then((result) => {
+//     if (result.status == 200) quotation.value = result.data
+//   })
+// }
+// getQuotation()
+// setInterval(() => {
+//   getQuotation()
+// }, 10000)
 const $router = useRouter()
 const author = ref({})
 author.value = kyt
@@ -90,8 +104,9 @@ onUnmounted(() => {
 
 <style lang="scss" scoped>
 .header {
+  position: relative;
   .introduction {
-    height: 38rem;
+    height: 36rem;
     padding-top: 6rem;
 
     .avatar {
@@ -152,6 +167,26 @@ onUnmounted(() => {
     }
   }
 }
+.quotation {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  line-height: 4.5rem;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.112);
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+  &-msg {
+    width: auto;
+    white-space: nowrap;
+    padding-left: 105%;
+    padding-right: 150%;
+    display: block;
+    animation: autoScroll 10s infinite linear;
+    transition: 3s;
+  }
+}
+
 /* 显示或关闭动画*/
 .open {
   animation: slideContentUp 0.5s linear both;
@@ -189,6 +224,16 @@ onUnmounted(() => {
 
   to {
     top: 0;
+  }
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
   }
 }
 .black {

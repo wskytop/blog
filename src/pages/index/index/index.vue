@@ -84,7 +84,6 @@ watch(
   }
 )
 showData.value = article.slice(0, 10)
-// console.log(showData.value[4].content)
 const changeCurrent = (cur, a, b) => {
   current.value = cur
   showData.value = article.slice((cur - 1) * 10, cur * 10)

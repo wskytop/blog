@@ -52,9 +52,16 @@ export default defineConfig({
   },
   server: {
     port: 8080, // 启动端口
-    hmr: {
-      host: '127.0.0.1',
-      port: 8080
+    // hmr: {
+    //   host: '127.0.0.1',
+    //   port: 8080
+    // },
+    proxy: {
+      '/api': {
+        target: 'https://api.uixsj.cn/',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api/, '')
+      }
     }
   },
   optimizeDeps: {

@@ -113,6 +113,7 @@ const goDetail = (item) => {
       position: relative;
 
       .title {
+        white-space: nowrap;
         font-size: 18px;
         display: block;
         padding: 7px 80px 7px 15px;

@@ -90,3 +90,8 @@ ul {
 .mg-r-12 {
   margin-right: 12px;
 }
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0 !important
+}

@@ -163,7 +163,7 @@ onUnmounted(() => {
   }
 
   .tab-list {
-    font-size: 1.6rem;
+    font-size: 16px;
     width: 20rem;
     margin-right: 10%;
 
@@ -179,7 +179,7 @@ onUnmounted(() => {
   line-height: 4.5rem;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.112);
   color: white;
-  font-size: 1.8rem;
+  font-size: 18px;
   text-align: center;
   overflow: hidden;
   &-msg {

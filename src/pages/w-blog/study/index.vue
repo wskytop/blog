@@ -4,19 +4,15 @@
       <div class="item" v-for="(item, index) in list" :key="index">
         <div class="item-header">
           <div class="flex-row-b">
-            <span class="title">{{ item }}</span>
+            <span class="title">{{ item.title }}</span>
             <span class="title-more" @click="goDetail(index)"
-              ><span v-if="!isMobile">more </span>>></span
+              ><span v-if="!isMobile">Enter </span>>></span
             >
           </div>
         </div>
-        <!-- <div class="item-content flex-row-center">
-          <div class="item-content-img">
-            <img
-              src="https://image.dahuangf.com/hornet_erp/1666598296426.jpg"
-            />
-          </div>
-        </div> -->
+        <div v-if="item.des" class="item-content flex-row-center">
+          {{ item.des }}
+        </div>
       </div>
     </div>
   </div>
@@ -31,13 +27,17 @@ const $router = useRouter()
 const { isMobile } = useHandler()
 
 // 展示的数据
-const list = reactive(['Expanding Cards', 'Process', 'Car Driving'])
+const list = reactive([
+  { title: 'Expanding Cards', des: '图片的卡片式覆盖' },
+  { title: 'Process', des: '进度条' },
+  { title: 'Car Driving', des: '好玩的无缝切地图的3D开车游戏' }
+])
 const goDetail = (index) => {
   $router.push(`/w-blog/study/demo/${index + 1}?hide=true`)
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .list {
   max-width: 92rem;
   padding: 0;
@@ -87,6 +87,16 @@ const goDetail = (index) => {
           color: #fff !important;
         }
       }
+    }
+    &-content {
+      height: 100%;
+      font-size: 16px;
+      padding: 15px;
+      // min-height: 18rem;
+      background: #f9f9f9;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      color: #444;
     }
   }
 }

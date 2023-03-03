@@ -6,6 +6,7 @@ import Pages from 'vite-plugin-pages'
 import * as path from 'path'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import viteCompression from 'vite-plugin-compression'
 
 export default defineConfig({
   base: '/w-blog/',
@@ -13,6 +14,12 @@ export default defineConfig({
     vue(),
     Pages({
       exclude: ['**/components/*.vue']
+    }),
+    viteCompression({
+      verbose: false,
+      disable: false,
+      algorithm: 'gzip',
+      ext: '.gz'
     }),
     // 按需引入element插件
     AutoImport({
@@ -48,10 +55,13 @@ export default defineConfig({
         }
       }
     },
+    target: 'esnext',
     cssTarget: 'chrome61'
   },
   server: {
-    port: 8080, // 启动端口
+    port: 3006, // 启动端口
+    cors: true,
+    origin: 'http://localhost:3006',
     // hmr: {
     //   host: '127.0.0.1',
     //   port: 8080

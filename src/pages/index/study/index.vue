@@ -33,7 +33,7 @@ const list = reactive([
   { title: 'Car Driving', des: '好玩的无缝切地图的3D开车游戏' }
 ])
 const goDetail = (index) => {
-  $router.push(`/w-blog/study/demo/${index + 1}?hide=true`)
+  $router.push(`/study/demo/${index + 1}?hide=true`)
 }
 </script>
 

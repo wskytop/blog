@@ -71,17 +71,17 @@ const $router = useRouter()
 const author = ref({})
 author.value = kyt
 const goFont = () => {
-  $router.push('/w-blog/')
+  $router.push('/')
 }
 const $route = useRoute()
 const isHide = computed(() => {
   return !$route.query.hide == true
 })
 const goDemo = () => {
-  $router.push('/w-blog/study?hide=true')
+  $router.push('/study?hide=true')
 }
 const goAbout = () => {
-  $router.push('/w-blog/about')
+  $router.push('/about')
 }
 const banner = ref(null)
 const changeHeight = () => {

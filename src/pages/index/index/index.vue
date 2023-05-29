@@ -91,7 +91,7 @@ const changeCurrent = (cur, a, b) => {
   showData.value = article.slice((cur - 1) * 10, cur * 10)
 }
 const goDetail = (item) => {
-  $router.push(`/w-blog/detail?id=${item.id}`)
+  $router.push(`/detail?id=${item.id}`)
 }
 </script>
 

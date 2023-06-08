@@ -9,7 +9,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import viteCompression from 'vite-plugin-compression'
 
 export default defineConfig({
-  base: '/w-blog/',
+  // base: '/w-blog/',
   plugins: [
     vue(),
     Pages({

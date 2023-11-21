@@ -1,7 +1,7 @@
 export const kyt = {
   avatar:
     'https://img2.baidu.com/it/u=3678312618,1363990359&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400',
-  name: "Hugh's Blog",
+  name: "Devon's Blog",
   description: '专注web开发的网站',
   others: '',
   bgImg:

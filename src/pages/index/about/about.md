@@ -1,10 +1,13 @@
 ### 关于我
 
-2022届本科生，从事 WEB 开发，主要开发语言 `JavaScript`，熟悉使用 `Vue`等主流框架
+2022 届本科生，从事 WEB 开发，主要开发语言 `JavaScript`，熟悉使用 `Vue`等主流框架
 
 ### 关于学习
+
 正在往终身学习者前进...
+
 ### 关于座右铭
+
 > 逝者如斯夫，不舍昼夜
 
 ### 关于爱好
@@ -15,5 +18,6 @@
 - 当然和朋友们一起出去玩耍同样使我开心不已
 
 ### 联系我
-* Email: wskytop@163.com
-* GitHub: [Hugh](https://gitee.com/wskytop)
+
+- Email: wskytop@163.com
+- GitHub: [Devon](https://gitee.com/wskytop)

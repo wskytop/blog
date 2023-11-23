@@ -7,11 +7,3 @@ export const kyt = {
   bgImg:
     'https://image.dahuangf.com/hornet_erp/banner--1669171919251rlqlat1v3ji.jpg'
 }
-export const pmh = {
-  avatar:
-    'https://img2.baidu.com/it/u=2482126084,3566358098&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
-  name: "Ttods's Blog",
-  description: '专注web开发的网站',
-  others: '',
-  bgImg: ''
-}

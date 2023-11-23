@@ -1,6 +1,6 @@
-import{r as h,c as U,o as q,n as F,a as G,b as i,d as p,u as m,e as n,t as f,f as x,g as tr,p as $,h as I,w as K,i as g,j as or,k as S,l as _,F as j,m as sr,q as Y,s as D,v as T,x as C,y as E,z as X,A as ar,B as ir}from"./@vue.2a878af1.js";import{d as cr,c as lr}from"./pinia.a6b35b3a.js";import{V as H,v as pr,a as ur,b as dr}from"./@kangc.1b3617eb.js";import{P as mr}from"./prismjs.4474ba1a.js";import{u as V,a as Q,c as hr,b as gr}from"./vue-router.127b9093.js";import{E as fr,a as vr,b as br,v as yr,c as A}from"./element-plus.5aa1fc83.js";import{a as xr}from"./axios.c924aa86.js";import{s as _r,n as wr,c as O}from"./@element-plus.c7c01954.js";import"./vue-demi.bfae2336.js";import"./main.71a5cbc3.js";import"./vue.84a19eed.js";import"./@vueuse.e4317ae4.js";import"./lodash-es.b61273cf.js";import"./@popperjs.36402333.js";import"./form-data.d1f94bc2.js";(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))s(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&s(l)}).observe(document,{childList:!0,subtree:!0});function o(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerpolicy&&(a.referrerPolicy=t.referrerpolicy),t.crossorigin==="use-credentials"?a.credentials="include":t.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function s(t){if(t.ep)return;t.ep=!0;const a=o(t);fetch(t.href,a)}})();var Le=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};function Je(r){return r&&r.__esModule&&Object.prototype.hasOwnProperty.call(r,"default")?r.default:r}function ze(r){var e=r.default;if(typeof e=="function"){var o=function(){return e.apply(this,arguments)};o.prototype=e.prototype}else o={};return Object.defineProperty(o,"__esModule",{value:!0}),Object.keys(r).forEach(function(s){var t=Object.getOwnPropertyDescriptor(r,s);Object.defineProperty(o,s,t.get?t:{enumerable:!0,get:function(){return r[s]}})}),o}const jr={avatar:"https://img2.baidu.com/it/u=3678312618,1363990359&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400",name:"Devon's Blog",description:"\u4E13\u6CE8web\u5F00\u53D1\u7684\u7F51\u7AD9",others:"",bgImg:"https://image.dahuangf.com/hornet_erp/banner--1669171919251rlqlat1v3ji.jpg"};const y=(r,e)=>{const o=r.__vccOpts||r;for(const[s,t]of e)o[s]=t;return o},Z=r=>($("data-v-a3b9f32c"),r=r(),I(),r),Sr={key:0},Pr=Z(()=>n("div",{class:"header-title pointer"},[n("div",null,"Blog")],-1)),kr={class:"introduction flex-col-e"},Tr={class:"avatar pointer"},Cr=["src"],Vr={class:"title pointer"},Dr={key:0,class:"description pointer"},Ar={class:"quotation"},Or={class:"quotation-msg"},Mr=Z(()=>n("div",{class:"header-title pointer"},[n("div",null,"Blog")],-1)),Rr={__name:"header",props:{isMobile:{type:Boolean,default:!1}},setup(r){const e=h("");(async()=>{xr.get("https://api.uixsj.cn/hitokoto/get?type=social").then(b=>{b.status==200&&(e.value=b.data)})})();const s=V(),t=h({});t.value=jr;const a=()=>{s.push("/")},l=Q(),c=U(()=>!l.query.hide),u=()=>{s.push("/study?hide=true")},v=()=>{s.push("/about")},d=h(null),w=()=>{(document.documentElement.scrollTop||document.body.scrollTop)>10?(d.value.classList.remove("open"),d.value.classList.add("close")):(d.value.classList.remove("close"),d.value.classList.add("open"))};return q(()=>{F(()=>{c.value&&window.addEventListener("scroll",w)})}),G(()=>{F(()=>{c.value&&window.removeEventListener("scroll",w)})}),(b,R)=>(i(),p("div",{class:"header",style:tr(m(c)?{backgroundImage:"url("+t.value.bgImg+")",backgroundSize:"cover",height:"42rem"}:{height:"8rem"})},[m(c)?(i(),p("div",Sr,[n("div",{class:"banner flex-row-b",ref_key:"banner",ref:d},[Pr,n("div",{class:"tab-list flex"},[n("div",{class:"tab pointer",onClick:a},"\u9996\u9875"),n("div",{class:"tab pointer",onClick:u},"\u9879\u76EE"),n("div",{class:"tab pointer",onClick:v},"\u5173\u4E8E")])],512),n("div",kr,[n("div",Tr,[n("img",{class:"avatar-img",src:t.value.avatar},null,8,Cr)]),n("div",Vr,f(t.value.name),1),r.isMobile?x("",!0):(i(),p("div",Dr,f(t.value.description),1))]),n("div",Ar,[n("span",Or,f(e.value),1)])])):(i(),p("div",{key:1,class:"banner flex-row-b black",ref_key:"banner",ref:d},[Mr,n("div",{class:"tab-list flex"},[n("div",{class:"tab pointer",onClick:a},"\u9996\u9875"),n("div",{class:"tab pointer",onClick:u},"\u9879\u76EE"),n("div",{class:"tab pointer",onClick:v},"\u5173\u4E8E")])],512))],4))}},$r=y(Rr,[["__scopeId","data-v-a3b9f32c"]]),Ir=cr("nav",{state:()=>({search:!1,tags:!1,searchContent:"",tagsContent:""}),actions:{updateSearch(){this.search=!this.search},updateTags(){this.tags=!this.tags}}});function N(){return{nav:Ir()}}const L=r=>($("data-v-adcbffd9"),r=r(),I(),r),Er={class:"side-bar flex-col"},Hr=L(()=>n("i",{class:"iconfont icon-sousuo bar-icon"},null,-1)),Nr=[Hr],Lr=L(()=>n("i",{class:"iconfont icon-chongzhi bar-icon"},null,-1)),Jr=[Lr],zr=L(()=>n("i",{class:"iconfont icon-shouye bar-icon"},null,-1)),Fr=[zr],Br={__name:"sideBar",setup(r){const{nav:e}=N(),o=V(),s=()=>{e.updateSearch()},t=()=>{e.searchContent=""},a=()=>{o.push("/")};return(l,c)=>(i(),p("div",Er,[n("div",{class:"search bar flex-center pointer",onClick:s},Nr),n("div",{class:"tags bar flex-center pointer",onClick:t},Jr),n("div",{class:"font bar flex-center pointer",onClick:a},Fr)]))}},Wr=y(Br,[["__scopeId","data-v-adcbffd9"]]);const Ur={__name:"search",setup(r){const{nav:e}=N(),o=h(null),s=h(""),t=h(null);K(()=>e.search,c=>{c?(t.value.classList.remove("disappear"),t.value.classList.add("appear"),o.value.focus()):(t.value.classList.remove("appear"),t.value.classList.add("disappear"))});const a=()=>{e.search=!1,s.value=""},l=c=>{e.searchContent=c,a()};return(c,u)=>{const v=fr;return i(),p("div",{class:"search-dialog",ref_key:"dialog",ref:t},[g(v,{class:"search-input",ref_key:"search",ref:o,modelValue:s.value,"onUpdate:modelValue":u[0]||(u[0]=d=>s.value=d),placeholder:"\u641C\u7D22\u535A\u5BA2","suffix-icon":m(_r),size:"large",onChange:l,autofocus:""},null,8,["modelValue","suffix-icon"]),n("span",{class:"cancel pointer",onClick:a},"\xD7")],512)}}},qr=y(Ur,[["__scopeId","data-v-60e410a3"]]),Gr=()=>(window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth)<=750,rr=r=>{if(!r)return"";const e=r.replace(/\n/g,"").replace(/(\*\*|__)(.*?)(\*\*|__)/g,"").replace(/!\[[\s\S]*?\]\([\s\S]*?\)/g,"").replace(/\[[\s\S]*?\]\([\s\S]*?\)/g,"").replace(/<\/?.+?\/?>/g,"").replace(/(\*)(.*?)(\*)/g,"").replace(/`{1,2}[^`](.*?)`{1,2}/g,"").replace(/```([\s\S]*?)```[\s]*/g,"").replace(/~~(.*?)~~/g,"").replace(/[\s]*[0-9]+\.(.*)/g,"").replace(/(#+)(.*)/g,"").replace(/(>+)(.*)/g,"").replace(/\r\n/g,"").replace(/\s/g,"").replace(/(?<=(---)).*?(?=(---))/,"").replace(/[\s]*[-*+]/g,"").slice(0,205),o=r.replace(/[\r\n]/g,"").match(/(?<=(---)).*?(?=(---))/g);let s={};if(o[0]){const t=o[0].match(/(?<=(title(:|：))).*?(?=(date))/g)[0]||"",a=o[0].match(/(?<=(date(:|：))).*?(?=(tags))/g)[0]||"",l=o[0].match(/(?<=(tags(:|：))).*?(?=(cover_picture))/g)[0]||"",c=o[0].match(/(?<=(cover_picture(:|：))).*/g)[0]||"";s={title:t,date:a,tags:l,cover_picture:c,description:e}}return s},B={isMobile:Gr,formatMd:rr},J=()=>{const r=h(B.isMobile()),e=()=>{r.value=B.isMobile()};return q(()=>{window.addEventListener("resize",e)}),G(()=>{window.removeEventListener("resize",e)}),{isMobile:r}},Kr={class:"g-main"},Yr=or({__name:"index",setup(r){const e=Q(),o=U(()=>!e.query.hide),{isMobile:s}=J();return(t,a)=>{const l=S("router-view"),c=vr;return i(),p(j,null,[g($r,{isMobile:m(s)},null,8,["isMobile"]),m(o)?(i(),_(qr,{key:0})):x("",!0),m(o)?(i(),_(Wr,{key:1})):x("",!0),n("div",Kr,[g(l)]),g(c,{right:40,bottom:40})],64)}}});const Xr=y(Yr,[["__scopeId","data-v-57856dae"]]),Qr=`### \u5173\u4E8E\u6211
+import{r as h,c as U,o as q,n as F,a as G,b as i,d as p,u as m,e as n,t as f,f as x,g as tr,p as R,h as $,w as K,i as g,j as or,k as S,l as _,F as j,m as sr,q as Y,s as A,v as T,x as C,y as E,z as X,A as ar,B as ir}from"./@vue.2a878af1.js";import{d as cr,c as lr}from"./pinia.a6b35b3a.js";import{V as N,v as pr,a as ur,b as dr}from"./@kangc.445132fd.js";import{P as mr}from"./prismjs.c797ab20.js";import{u as V,a as Q,c as hr,b as gr}from"./vue-router.127b9093.js";import{E as fr,a as vr,b as br,v as yr,c as D}from"./element-plus.5aa1fc83.js";import{a as xr}from"./axios.c924aa86.js";import{s as _r,n as wr,c as O}from"./@element-plus.c7c01954.js";import"./vue-demi.bfae2336.js";import"./main.257a6500.js";import"./vue.45ffc6c4.js";import"./@vueuse.e4317ae4.js";import"./lodash-es.b61273cf.js";import"./@popperjs.36402333.js";import"./form-data.d1f94bc2.js";(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))s(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&s(l)}).observe(document,{childList:!0,subtree:!0});function o(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerpolicy&&(a.referrerPolicy=t.referrerpolicy),t.crossorigin==="use-credentials"?a.credentials="include":t.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function s(t){if(t.ep)return;t.ep=!0;const a=o(t);fetch(t.href,a)}})();var ze=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};function Fe(r){return r&&r.__esModule&&Object.prototype.hasOwnProperty.call(r,"default")?r.default:r}function We(r){var e=r.default;if(typeof e=="function"){var o=function(){return e.apply(this,arguments)};o.prototype=e.prototype}else o={};return Object.defineProperty(o,"__esModule",{value:!0}),Object.keys(r).forEach(function(s){var t=Object.getOwnPropertyDescriptor(r,s);Object.defineProperty(o,s,t.get?t:{enumerable:!0,get:function(){return r[s]}})}),o}const jr={avatar:"https://img2.baidu.com/it/u=3678312618,1363990359&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400",name:"Devon's Blog",description:"\u4E13\u6CE8web\u5F00\u53D1\u7684\u7F51\u7AD9",others:"",bgImg:"https://image.dahuangf.com/hornet_erp/banner--1669171919251rlqlat1v3ji.jpg"};const y=(r,e)=>{const o=r.__vccOpts||r;for(const[s,t]of e)o[s]=t;return o},Z=r=>(R("data-v-a3b9f32c"),r=r(),$(),r),Sr={key:0},Pr=Z(()=>n("div",{class:"header-title pointer"},[n("div",null,"Blog")],-1)),kr={class:"introduction flex-col-e"},Tr={class:"avatar pointer"},Cr=["src"],Vr={class:"title pointer"},Ar={key:0,class:"description pointer"},Dr={class:"quotation"},Or={class:"quotation-msg"},Mr=Z(()=>n("div",{class:"header-title pointer"},[n("div",null,"Blog")],-1)),Ir={__name:"header",props:{isMobile:{type:Boolean,default:!1}},setup(r){const e=h("");(async()=>{xr.get("https://api.uixsj.cn/hitokoto/get?type=social").then(b=>{b.status==200&&(e.value=b.data)})})();const s=V(),t=h({});t.value=jr;const a=()=>{s.push("/")},l=Q(),c=U(()=>!l.query.hide),u=()=>{s.push("/study?hide=true")},v=()=>{s.push("/about")},d=h(null),w=()=>{(document.documentElement.scrollTop||document.body.scrollTop)>10?(d.value.classList.remove("open"),d.value.classList.add("close")):(d.value.classList.remove("close"),d.value.classList.add("open"))};return q(()=>{F(()=>{c.value&&window.addEventListener("scroll",w)})}),G(()=>{F(()=>{c.value&&window.removeEventListener("scroll",w)})}),(b,I)=>(i(),p("div",{class:"header",style:tr(m(c)?{backgroundImage:"url("+t.value.bgImg+")",backgroundSize:"cover",height:"42rem"}:{height:"8rem"})},[m(c)?(i(),p("div",Sr,[n("div",{class:"banner flex-row-b",ref_key:"banner",ref:d},[Pr,n("div",{class:"tab-list flex"},[n("div",{class:"tab pointer",onClick:a},"\u9996\u9875"),n("div",{class:"tab pointer",onClick:u},"\u9879\u76EE"),n("div",{class:"tab pointer",onClick:v},"\u5173\u4E8E")])],512),n("div",kr,[n("div",Tr,[n("img",{class:"avatar-img",src:t.value.avatar},null,8,Cr)]),n("div",Vr,f(t.value.name),1),r.isMobile?x("",!0):(i(),p("div",Ar,f(t.value.description),1))]),n("div",Dr,[n("span",Or,f(e.value),1)])])):(i(),p("div",{key:1,class:"banner flex-row-b black",ref_key:"banner",ref:d},[Mr,n("div",{class:"tab-list flex"},[n("div",{class:"tab pointer",onClick:a},"\u9996\u9875"),n("div",{class:"tab pointer",onClick:u},"\u9879\u76EE"),n("div",{class:"tab pointer",onClick:v},"\u5173\u4E8E")])],512))],4))}},Rr=y(Ir,[["__scopeId","data-v-a3b9f32c"]]),$r=cr("nav",{state:()=>({search:!1,tags:!1,searchContent:"",tagsContent:""}),actions:{updateSearch(){this.search=!this.search},updateTags(){this.tags=!this.tags}}});function H(){return{nav:$r()}}const L=r=>(R("data-v-adcbffd9"),r=r(),$(),r),Er={class:"side-bar flex-col"},Nr=L(()=>n("i",{class:"iconfont icon-sousuo bar-icon"},null,-1)),Hr=[Nr],Lr=L(()=>n("i",{class:"iconfont icon-chongzhi bar-icon"},null,-1)),Jr=[Lr],zr=L(()=>n("i",{class:"iconfont icon-shouye bar-icon"},null,-1)),Fr=[zr],Wr={__name:"sideBar",setup(r){const{nav:e}=H(),o=V(),s=()=>{e.updateSearch()},t=()=>{e.searchContent=""},a=()=>{o.push("/")};return(l,c)=>(i(),p("div",Er,[n("div",{class:"search bar flex-center pointer",onClick:s},Hr),n("div",{class:"tags bar flex-center pointer",onClick:t},Jr),n("div",{class:"font bar flex-center pointer",onClick:a},Fr)]))}},Br=y(Wr,[["__scopeId","data-v-adcbffd9"]]);const Ur={__name:"search",setup(r){const{nav:e}=H(),o=h(null),s=h(""),t=h(null);K(()=>e.search,c=>{c?(t.value.classList.remove("disappear"),t.value.classList.add("appear"),o.value.focus()):(t.value.classList.remove("appear"),t.value.classList.add("disappear"))});const a=()=>{e.search=!1,s.value=""},l=c=>{e.searchContent=c,a()};return(c,u)=>{const v=fr;return i(),p("div",{class:"search-dialog",ref_key:"dialog",ref:t},[g(v,{class:"search-input",ref_key:"search",ref:o,modelValue:s.value,"onUpdate:modelValue":u[0]||(u[0]=d=>s.value=d),placeholder:"\u641C\u7D22\u535A\u5BA2","suffix-icon":m(_r),size:"large",onChange:l,autofocus:""},null,8,["modelValue","suffix-icon"]),n("span",{class:"cancel pointer",onClick:a},"\xD7")],512)}}},qr=y(Ur,[["__scopeId","data-v-60e410a3"]]),Gr=()=>(window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth)<=750,rr=r=>{if(!r)return"";const e=r.replace(/\n/g,"").replace(/(\*\*|__)(.*?)(\*\*|__)/g,"").replace(/!\[[\s\S]*?\]\([\s\S]*?\)/g,"").replace(/\[[\s\S]*?\]\([\s\S]*?\)/g,"").replace(/<\/?.+?\/?>/g,"").replace(/(\*)(.*?)(\*)/g,"").replace(/`{1,2}[^`](.*?)`{1,2}/g,"").replace(/```([\s\S]*?)```[\s]*/g,"").replace(/~~(.*?)~~/g,"").replace(/[\s]*[0-9]+\.(.*)/g,"").replace(/(#+)(.*)/g,"").replace(/(>+)(.*)/g,"").replace(/\r\n/g,"").replace(/\s/g,"").replace(/(?<=(---)).*?(?=(---))/,"").replace(/[\s]*[-*+]/g,"").slice(0,205),o=r.replace(/[\r\n]/g,"").match(/(?<=(---)).*?(?=(---))/g);let s={};if(o[0]){const t=o[0].match(/(?<=(title(:|：))).*?(?=(date))/g)[0]||"",a=o[0].match(/(?<=(date(:|：))).*?(?=(tags))/g)[0]||"",l=o[0].match(/(?<=(tags(:|：))).*?(?=(cover_picture))/g)[0]||"",c=o[0].match(/(?<=(cover_picture(:|：))).*/g)[0]||"";s={title:t,date:a,tags:l,cover_picture:c,description:e}}return s},W={isMobile:Gr,formatMd:rr},J=()=>{const r=h(W.isMobile()),e=()=>{r.value=W.isMobile()};return q(()=>{window.addEventListener("resize",e)}),G(()=>{window.removeEventListener("resize",e)}),{isMobile:r}},Kr={class:"g-main"},Yr=or({__name:"index",setup(r){const e=Q(),o=U(()=>!e.query.hide),{isMobile:s}=J();return(t,a)=>{const l=S("router-view"),c=vr;return i(),p(j,null,[g(Rr,{isMobile:m(s)},null,8,["isMobile"]),m(o)?(i(),_(qr,{key:0})):x("",!0),m(o)?(i(),_(Br,{key:1})):x("",!0),n("div",Kr,[g(l)]),g(c,{right:40,bottom:40})],64)}}});const Xr=y(Yr,[["__scopeId","data-v-57856dae"]]),Qr=`### \u5173\u4E8E\u6211
 
-2022 \u5C4A\u672C\u79D1\u751F\uFF0C\u4ECE\u4E8B WEB \u5F00\u53D1\uFF0C\u4E3B\u8981\u5F00\u53D1\u8BED\u8A00 \`JavaScript\`\uFF0C\u719F\u6089\u4F7F\u7528 \`Vue\`\u7B49\u4E3B\u6D41\u6846\u67B6
+2022 \u5C4A\u672C\u79D1\u751F\uFF0C\u4ECE\u4E8B WEB \u5F00\u53D1\uFF0C\u4E3B\u8981\u5F00\u53D1\u8BED\u8A00 \`JavaScript\`\uFF0C\u719F\u6089\u4F7F\u7528 \`Vue\`\u7B49\u4E3B\u6D41\u6846\u67B6\uFF0C\u719F\u7EC3\u4F7F\u7528uniapp\u8DE8\u7AEF\u5F00\u53D1\uFF0C\u5177\u6709RN\u9879\u76EE\u5F00\u53D1\u7ECF\u9A8C
 
 ### \u5173\u4E8E\u5B66\u4E60
 
@@ -4757,4 +4757,640 @@ webpack \u662F\u81EA\u52A8\u5316\u6253\u5305\u89E3\u51B3\u65B9\u6848\uFF0C\u4E5F
 \r
  Loader\uFF1A\u76F4\u8BD1\u4E3A"\u52A0\u8F7D\u5668"\u3002Webpack\u5C06\u4E00\u5207\u6587\u4EF6\u89C6\u4E3A\u6A21\u5757\uFF0C\u4F46\u662Fwebpack\u539F\u751F\u662F\u53EA\u80FD\u89E3\u6790js\u6587\u4EF6\uFF0C\u5982\u679C\u60F3\u5C06\u5176\u4ED6\u6587\u4EF6\u4E5F\u6253\u5305\u7684\u8BDD\uFF0C\u5C31\u4F1A\u7528\u5230\`loader\`\u3002 \u6240\u4EE5Loader\u7684\u4F5C\u7528\u662F\u8BA9webpack\u62E5\u6709\u4E86\u52A0\u8F7D\u548C\u89E3\u6790\u975EJavaScript\u6587\u4EF6\u7684\u80FD\u529B\u3002   \r
 \r
-Plugin\uFF1A\u76F4\u8BD1\u4E3A"\u63D2\u4EF6"\u3002Plugin\u53EF\u4EE5\u6269\u5C55webpack\u7684\u529F\u80FD\uFF0C\u8BA9webpack\u5177\u6709\u66F4\u591A\u7684\u7075\u6D3B\u6027\u3002 \u5728 Webpack \u8FD0\u884C\u7684\u751F\u547D\u5468\u671F\u4E2D\u4F1A\u5E7F\u64AD\u51FA\u8BB8\u591A\u4E8B\u4EF6\uFF0CPlugin \u53EF\u4EE5\u76D1\u542C\u8FD9\u4E9B\u4E8B\u4EF6\uFF0C\u5728\u5408\u9002\u7684\u65F6\u673A\u901A\u8FC7 Webpack \u63D0\u4F9B\u7684 API \u6539\u53D8\u8F93\u51FA\u7ED3\u679C\u3002`;let W=0;const k=[{content:rn},{content:nn},{content:en},{content:tn},{content:on},{content:sn},{content:an},{content:cn},{content:ln},{content:pn},{content:un},{content:dn}].map(r=>{const e=rr(r.content),o=r.content.indexOf("---",10);return r.content=r.content.substring(o+3),W+=1,{...r,...e,id:W}}),mn={__name:"index",setup(r){const o=V().currentRoute.value.query.id,s=h();return s.value=k.find(t=>t.id==o),(t,a)=>{const l=S("ui-article"),c=sr("title");return Y((i(),_(l,{text:s.value.content,data:s.value,"data-title":s.value.title},null,8,["text","data","data-title"])),[[c]])}}};const hn={class:"wrap"},gn={class:"list"},fn={class:"item-header"},vn={class:"title"},bn={class:"tag"},yn={class:"tag-name"},xn={class:"item-content flex-row-center"},_n={key:0,class:"item-content-img"},wn=n("img",{src:"https://image.dahuangf.com/hornet_erp/1666598296426.jpg"},null,-1),jn=[wn],Sn=["onClick"],Pn={class:"item-footer"},kn={class:"item-footer-l"},Tn=["onClick"],Cn=C("more"),Vn={key:0},Dn={style:{"text-align":"center"}},An={style:{display:"inline-block",float:"none",margin:"30px auto"}},On={__name:"index",setup(r){const e=V(),{isMobile:o}=J(),s=h(!1),{nav:t}=N(),a=h({}),l=h(1),c=h(k.length);K(()=>t.searchContent,d=>{s.value=!0,setTimeout(()=>{const w=k.filter(b=>new RegExp(t.searchContent).test(b.title));c.value=w.length,a.value=w.slice(0,10),s.value=!1},300)}),a.value=k.slice(0,10);const u=(d,w,b)=>{l.value=d,a.value=k.slice((d-1)*10,d*10)},v=d=>{e.push(`/detail?id=${d.id}`)};return(d,w)=>{const b=A,R=br,nr=yr;return i(),p("div",hn,[Y((i(),p("div",gn,[(i(!0),p(j,null,D(a.value,(P,z)=>(i(),p("div",{class:"item",key:z},[n("div",fn,[n("div",null,[n("span",vn,f(P.title),1)]),n("span",bn,[m(o)?x("",!0):(i(),_(b,{key:0,size:10},{default:T(()=>[g(m(wr))]),_:1})),n("span",yn,f(P.tags),1)])]),n("div",xn,[m(o)?x("",!0):(i(),p("div",_n,jn)),n("span",{class:"item-content-msg",onClick:er=>v(z)},f(P.description),9,Sn)]),n("div",Pn,[n("div",kn,[g(b,{color:"#999",size:15,style:{"vertical-align":"-0.1rem","margin-right":"0.6rem"}},{default:T(()=>[g(m(O))]),_:1}),n("span",null,f(P.date),1)]),n("span",{class:"item-footer-r",onClick:er=>v(P)},[Cn,m(o)?x("",!0):(i(),p("span",Vn," >>"))],8,Tn)])]))),128))])),[[nr,s.value]]),n("div",Dn,[n("div",An,[g(R,{background:"",layout:"prev, pager, next",total:c.value,onCurrentChange:u},null,8,["total"])])])])}}};const Mn={class:"wrap"},Rn={class:"list"},$n={class:"item-header"},In={class:"flex-row-b"},En={class:"title"},Hn=["onClick"],Nn={key:0},Ln=C(">>"),Jn={key:0,class:"item-content flex-row-center"},zn={__name:"index",setup(r){const e=V(),{isMobile:o}=J(),s=E([{title:"Expanding Cards",des:"\u56FE\u7247\u7684\u5361\u7247\u5F0F\u8986\u76D6"},{title:"Process",des:"\u8FDB\u5EA6\u6761"},{title:"Car Driving",des:"\u597D\u73A9\u7684\u65E0\u7F1D\u5207\u5730\u56FE\u76843D\u5F00\u8F66\u6E38\u620F"}]),t=a=>{e.push(`/study/demo/${a+1}?hide=true`)};return(a,l)=>(i(),p("div",Mn,[n("div",Rn,[(i(!0),p(j,null,D(s,(c,u)=>(i(),p("div",{class:"item",key:u},[n("div",$n,[n("div",In,[n("span",En,f(c.title),1),n("span",{class:"title-more",onClick:v=>t(u)},[m(o)?x("",!0):(i(),p("span",Nn,"Enter ")),Ln],8,Hn)])]),c.des?(i(),p("div",Jn,f(c.des),1)):x("",!0)]))),128))])]))}},Fn=y(zn,[["__scopeId","data-v-ca8cf8d4"]]);const Bn={class:"date"},Wn=C("2022/11/23 "),Un={class:"demo flex"},qn=["onClick"],Gn=["src"],Kn={__name:"1",setup(r){const e=E(["/imgs/demo/1/demo1_1.jpg","/imgs/demo/1/demo1_2.jpg","/imgs/demo/1/demo1_3.jpg","/imgs/demo/1/demo1_4.jpg"]),o=h(0);return(s,t)=>{const a=A;return i(),p(j,null,[n("div",Bn,[g(a,{class:"icon"},{default:T(()=>[g(m(O))]),_:1}),Wn]),n("div",Un,[(i(!0),p(j,null,D(e,(l,c)=>(i(),p("div",{key:c,class:X(["item",c===o.value?"active":""]),onClick:u=>o.value=c},[n("img",{class:"imgs",src:l,alt:""},null,8,Gn)],10,qn))),128))])],64)}}},Yn=y(Kn,[["__scopeId","data-v-74d0088e"]]);const Xn=r=>($("data-v-b1ae19f4"),r=r(),I(),r),Qn={class:"date"},Zn=C("2022/11/24 "),re={class:"demo"},ne={class:"process"},ee=Xn(()=>n("div",{class:"line"},null,-1)),te={class:"flex-center footer"},oe={__name:"2",setup(r){ar(a=>({"7bcbc020":s.value}));const e=h(0),o=E([{bTtitle:"\u8FDB\u884C\u4E2D",aTitle:"\u5DF2\u7ED3\u675F",cur:!1},{bTtitle:"\u8FDB\u884C\u4E2D",aTitle:"\u5DF2\u7ED3\u675F",cur:!1},{bTtitle:"\u8FDB\u884C\u4E2D",aTitle:"\u5DF2\u7ED3\u675F",cur:!1}]),s=h("0"),t=a=>{const l=e.value;o[l].cur=a,e.value=a?e.value+1<o.length?e.value+1:e.value:e.value-1>0?e.value-1:0,s.value=`${(a?e.value-1:e.value)*15}rem`,a&&l+1==o.length&&(s.value=`${e.value*15}rem`)};return(a,l)=>{const c=A;return i(),p(j,null,[n("div",Qn,[g(c,{class:"icon"},{default:T(()=>[g(m(O))]),_:1}),Zn]),n("div",re,[n("div",ne,[ee,(i(!0),p(j,null,D(o,(u,v)=>(i(),p("div",{class:X(["cicle",u.cur?"active":""]),key:v},f(u.cur?u.aTitle:u.bTtitle),3))),128))]),n("div",te,[n("span",{class:"pointer",onClick:l[0]||(l[0]=u=>t(!1))},"\u4E0A\u4E00\u6B65"),n("span",{class:"pointer",onClick:l[1]||(l[1]=u=>t(!0))},"\u4E0B\u4E00\u6B65")])])],64)}}},se=y(oe,[["__scopeId","data-v-b1ae19f4"]]),ae={},ie={style:{width:"100%",height:"100%"}},ce=n("div",null,[n("iframe",{src:"/w-blog/car.html",scrolling:"auto",frameborder:"0",style:{width:"100%",height:"900px"}})],-1),le=[ce];function pe(r,e){return i(),p("div",ie,le)}const ue=y(ae,[["render",pe]]),de=[{name:"index",path:"/",component:Xr,children:[{name:"index-about",path:"about",component:Zr,props:!0},{name:"index-detail",path:"detail",component:mn,props:!0},{name:"index-index",path:"",component:On,props:!0},{name:"index-study",path:"study",component:Fn,props:!0},{name:"index-study-demo-1",path:"study/demo/1",component:Yn,props:!0},{name:"index-study-demo-2",path:"study/demo/2",component:se,props:!0},{name:"index-study-demo-3",path:"study/demo/3",component:ue,props:!0}],props:!0}],me=hr({history:gr("/w-blog/"),routes:de,scrollBehavior(r,e,o){return{top:0}}}),he={};function ge(r,e){const o=S("router-view");return i(),_(o)}const fe=y(he,[["render",ge]]);const ve={class:"content"},be={class:"content-wrap"},ye={key:0,class:"header"},xe={class:"title"},_e={class:"msg flex-center"},we={class:"date"},je={__name:"article",props:{text:{type:String,default:""},html:{type:String,default:""},data:{type:Object,default:()=>{}}},setup(r){return(e,o)=>{const s=A,t=S("v-md-preview"),a=S("v-md-preview-html");return i(),p("div",ve,[n("div",be,[r.data?(i(),p("div",ye,[n("h3",xe,f(r.data.title),1),n("div",_e,[n("div",we,[g(s,{class:"icon"},{default:T(()=>[g(m(O))]),_:1}),C(f(r.data.date),1)])])])):x("",!0),r.text?(i(),_(t,{key:1,text:r.text},null,8,["text"])):(i(),_(a,{key:2,html:r.html,"preview-class":"vuepress-markdown-body"},null,8,["html"]))])])}}},Se=y(je,[["__scopeId","data-v-1718fc26"]]);H.use(pr,{Prism:mr});const M=ir(fe);M.component("UiArticle",Se);M.directive("title",{mounted(r){document.title=r.dataset.title}});M.use(me).use(lr()).use(H).use(ur).mount("#app");M.provide("toHtml",r=>dr.exports.xss.process(H.vMdParser.themeConfig.markdownParser.render(r)));export{ze as a,Le as c,Je as g};
+Plugin\uFF1A\u76F4\u8BD1\u4E3A"\u63D2\u4EF6"\u3002Plugin\u53EF\u4EE5\u6269\u5C55webpack\u7684\u529F\u80FD\uFF0C\u8BA9webpack\u5177\u6709\u66F4\u591A\u7684\u7075\u6D3B\u6027\u3002 \u5728 Webpack \u8FD0\u884C\u7684\u751F\u547D\u5468\u671F\u4E2D\u4F1A\u5E7F\u64AD\u51FA\u8BB8\u591A\u4E8B\u4EF6\uFF0CPlugin \u53EF\u4EE5\u76D1\u542C\u8FD9\u4E9B\u4E8B\u4EF6\uFF0C\u5728\u5408\u9002\u7684\u65F6\u673A\u901A\u8FC7 Webpack \u63D0\u4F9B\u7684 API \u6539\u53D8\u8F93\u51FA\u7ED3\u679C\u3002`,mn=`---\r
+title: \u521D\u8BC6 TypeScript\r
+date: 2023-11-23 15:32:00\r
+tags: ts\r
+cover_picture:\r
+\r
+---\r
+\r
+\r
+\r
+#### 1.\u57FA\u7840\u7C7B\u578B\r
+\r
+\`\`\`\r
+let str: string = "jimmy";\r
+let num: number = 24;\r
+let bool: boolean = false;\r
+let u: undefined = undefined;\r
+let n: null = null;\r
+let obj: object = {x: 1};\r
+let big: bigint = 100n;\r
+let sym: symbol = Symbol("me"); \r
+\`\`\`\r
+\r
+> - \u9ED8\u8BA4\u60C5\u51B5\u4E0B \`null\` \u548C \`undefined\` \u662F\u6240\u6709\u7C7B\u578B\u7684\u5B50\u7C7B\u578B\u3002 \u5C31\u662F\u8BF4\u4F60\u53EF\u4EE5\u628A \`null\` \u548C \`undefined\` \u8D4B\u503C\u7ED9\u5176\u4ED6\u7C7B\u578B\r
+> - \u867D\u7136\`number\`\u548C\`bigint\`\u90FD\u8868\u793A\u6570\u5B57\uFF0C\u4F46\u662F\u8FD9\u4E24\u4E2A\u7C7B\u578B\u4E0D\u517C\u5BB9\u3002\r
+\r
+#### 2.\u590D\u6742\u7C7B\u578B\r
+\r
+##### \u8054\u5408\u7C7B\u578B\r
+\r
+> \u4F46\u5BF9\u4E8E\u4E00\u4E2A\u53D8\u91CF\u7684\u7C7B\u578B\u53EF\u80FD\u662F\u51E0\u79CD\u7C7B\u578B\u7684\u65F6\u5019\u6211\u4EEC\u53EF\u4EE5\u4F7F\u7528 \`any\` \uFF0C\u4F46\u662F \`any\` \u7684\u8303\u56F4\u662F\u4E0D\u662F\u6709\u70B9\u5927\u4E86\uFF0C\u4E0D\u5230**\u4E07\u4E0D\u5F97\u5DF2**\u4E0D\u4F7F\u7528\uFF0C\u5982\u679C\u77E5\u9053\u662F\u5176\u4E2D\u7684\u54EA\u51E0\u79CD\u7C7B\u578B\u7684\u8BDD\uFF0C\u6211\u4EEC\u5C31\u53EF\u4EE5\u4F7F\u7528 **\u8054\u5408\u7C7B\u578B** \u7528 \`|\` \u5206\u9694\r
+\r
+##### Array\r
+\r
+\u5BF9\u6570\u7EC4\u7C7B\u578B\u7684\u5B9A\u4E49\u6709\u4E24\u79CD\u65B9\u5F0F\uFF1A\r
+\r
+\`\`\`tsx\r
+let arr:string[] = ["1","2"];\r
+let arr2:Array<string> = ["1","2"]\uFF1B\r
+\`\`\`\r
+\r
+\u5B9A\u4E49\u8054\u5408\u7C7B\u578B\u6570\u7EC4:\r
+\r
+\`\`\`tsx\r
+let arr:(number | string)[];\r
+let arr:Array<string|number>;\r
+\`\`\`\r
+\r
+##### \u51FD\u6570\r
+\r
+###### \u51FD\u6570\u58F0\u660E\r
+\r
+\`\`\`tsx\r
+function sum(x: number, y: number): number {\r
+    return x + y;\r
+}\r
+\`\`\`\r
+\r
+###### \u51FD\u6570\u8868\u8FBE\u5F0F\r
+\r
+\`\`\`tsx\r
+let mySum = (x: number, y: number): number => {\r
+    return x + y;\r
+};\r
+\`\`\`\r
+\r
+###### \u53EF\u9009\u53C2\u6570\r
+\r
+\`\`\`tsx\r
+function fun(firstName: string, lastName?: string) {\r
+    if (lastName) {\r
+        return firstName + ' ' + lastName;\r
+    } else {\r
+        return firstName;\r
+    }\r
+}\r
+let tomcat = fun('Tom', 'Cat');\r
+let tom = fun('Tom');\r
+\`\`\`\r
+\r
+\`\u6CE8\u610F\u70B9\uFF1A\u53EF\u9009\u53C2\u6570\u540E\u9762\u4E0D\u5141\u8BB8\u518D\u51FA\u73B0\u5FC5\u9700\u53C2\u6570\`\r
+\r
+##### \u5143\u7EC4\r
+\r
+> \u9650\u5236\`\u6570\u7EC4\u5143\u7D20\u7684\u4E2A\u6570\u548C\u7C7B\u578B\`\r
+\r
+\`\`\`tsx\r
+let x: [string, number]; // \u7C7B\u578B\u5FC5\u987B\u5339\u914D\u4E14\u4E2A\u6570\u5FC5\u987B\u4E3A2\r
+\r
+x = ['hello', 10]; // OK \r
+x = ['hello', 10,10]; // Error \r
+x = [10, 'hello']; // Error\r
+\`\`\`\r
+\r
+###### \u53EF\u9009\u5143\u7D20\r
+\r
+> \u53EF\u4EE5\u901A\u8FC7 \`?\` \u53F7\u6765\u58F0\u660E\u5143\u7EC4\u7C7B\u578B\u7684\u53EF\u9009\u5143\u7D20\r
+\r
+\u4E3E\u4E2A\u6817\u5B50\uFF0C\u5728\u4E09\u7EF4\u5750\u6807\u8F74\u4E2D\uFF0C\u4E00\u4E2A\u5750\u6807\u70B9\u53EF\u4EE5\u4F7F\u7528 \`(x, y, z)\` \u7684\u5F62\u5F0F\u6765\u8868\u793A\uFF0C\u5BF9\u4E8E\u4E8C\u7EF4\u5750\u6807\u8F74\u6765\u8BF4\uFF0C\u5750\u6807\u70B9\u53EF\u4EE5\u4F7F\u7528 \`(x, y)\` \u7684\u5F62\u5F0F\u6765\u8868\u793A\uFF0C\u800C\u5BF9\u4E8E\u4E00\u7EF4\u5750\u6807\u8F74\u6765\u8BF4\uFF0C\u53EA\u8981\u4F7F\u7528 \`(x)\` \u7684\u5F62\u5F0F\u6765\u8868\u793A\u5373\u53EF\u3002\r
+\r
+\`\`\`tsx\r
+type Point = [number, number?, number?];\r
+\r
+const x: Point = [10]; // \u4E00\u7EF4\u5750\u6807\u70B9\r
+const xy: Point = [10, 20]; // \u4E8C\u7EF4\u5750\u6807\u70B9\r
+const xyz: Point = [10, 20, 10]; // \u4E09\u7EF4\u5750\u6807\u70B9\r
+\r
+console.log(x.length); // 1\r
+console.log(xy.length); // 2\r
+console.log(xyz.length); // 3\r
+\`\`\`\r
+\r
+#### 3.\u7C7B\u578B\u522B\u540D\r
+\r
+> \u7C7B\u578B\u522B\u540D\u7528\u6765\u7ED9\u4E00\u4E2A\u7C7B\u578B\u8D77\u4E2A\u65B0\u540D\u5B57\u3002\u7C7B\u578B\u522B\u540D\u5E38\u7528\u4E8E\u8054\u5408\u7C7B\u578B\u3002\r
+\r
+\`\`\`tsx\r
+type Message = string | string[];\r
+\`\`\`\r
+\r
+#### 4.\u63A5\u53E3\r
+\r
+> \u5B83\u80FD\u5F88\u65B9\u4FBF\u7684\u5E2E\u6211\u4EEC\u5B9A\u4E49 \`Ojbect\` \u7C7B\u578B\uFF0C\u5B83\u662F\u975E\u5E38\u7684\u7075\u6D3B\u53EF\u4EE5\u63CF\u8FF0\u5BF9\u8C61\u7684\u5404\u79CD\u7C7B\u578B\r
+\r
+\`\`\`tsx\r
+interface Person {\r
+  readonly name: string;\r
+  age?: number;\r
+}\r
+let tom: Person = {\r
+    name: 'Tom',\r
+    age: 25\r
+};\r
+\`\`\`\r
+\r
+\`\u5B9A\u4E49\u7684\u53D8\u91CF\u6BD4\u63A5\u53E3\u5C11\u4E00\u4E9B\u548C\u591A\u4E00\u4E9B\u5C5E\u6027\u90FD\u662F\u4E0D\u5141\u8BB8\u7684\`\r
+\r
+###### \u53EF\u9009\u5C5E\u6027\r
+\r
+> \u5728 \`interface\` \u5C5E\u6027\u4E2D\u6DFB\u52A0 \`\uFF1F\`\u8868\u793A\u8BE5\u5C5E\u6027\u53EF\u4EE5**\u7701\u7565**\r
+\r
+\`\`\`tsx\r
+let tom: Person = {\r
+    name: 'Tom',\r
+};\r
+\`\`\`\r
+\r
+###### \u53EA\u8BFB\u5C5E\u6027\r
+\r
+> \`readonly\` \u8868\u793A\u8BE5\u5C5E\u6027\u5728\u5B9A\u4E49\u5B8C\u540E\u5C31\u4E0D\u80FD\u4FEE\u6539\r
+\r
+###### \u4EFB\u610F\u5C5E\u6027\r
+\r
+> \u6709\u65F6\u5019\u6211\u4EEC\u5E0C\u671B\u4E00\u4E2A\u63A5\u53E3\u4E2D\u9664\u4E86\u5305\u542B\u5FC5\u9009\u548C\u53EF\u9009\u5C5E\u6027\u4E4B\u5916\uFF0C\u8FD8\u5141\u8BB8\u6709\u5176\u4ED6\u7684\u4EFB\u610F\u5C5E\u6027\uFF0C\u8FD9\u65F6\u6211\u4EEC\u53EF\u4EE5\u4F7F\u7528 **\u7D22\u5F15\u7B7E\u540D** \u7684\u5F62\u5F0F\u6765\u6EE1\u8DB3\u4E0A\u8FF0\u8981\u6C42\u3002\r
+\r
+\`\`\`tsx\r
+interface Person {\r
+    name: string;\r
+    age?: number;\r
+    [propName: string]: any;\r
+}\r
+\r
+let tom: Person = {\r
+    name: 'Tom',\r
+    gender: 'male'\r
+};\r
+\`\`\`\r
+\r
+\`\u6CE8\u610F\uFF1A\u4E00\u65E6\u5B9A\u4E49\u4E86\u4EFB\u610F\u5C5E\u6027\uFF0C\u90A3\u4E48\u786E\u5B9A\u5C5E\u6027\u548C\u53EF\u9009\u5C5E\u6027\u7684\u7C7B\u578B\u90FD\u5FC5\u987B\u662F\u5B83\u7684\u7C7B\u578B\u7684\u5B50\u96C6\`\r
+\r
+\`\`\`tsx\r
+interface Person {\r
+    name: string;\r
+    age?: number; // \u8FD9\u91CC\u771F\u5B9E\u7684\u7C7B\u578B\u5E94\u8BE5\u4E3A\uFF1Anumber | undefined\r
+    [propName: string]: string | number | undefined;\r
+}\r
+\r
+let tom: Person = {\r
+    name: 'Tom',\r
+    age: 25,\r
+    gender: 'male'\r
+};\r
+\`\`\`\r
+\r
+#### 5.\u7ED5\u5F00\u989D\u5916\u5C5E\u6027\u68C0\u67E5\u7684\u65B9\u5F0F\r
+\r
+##### \u9E2D\u5F0F\u8FA8\u578B\u6CD5\r
+\r
+> \u6240\u8C13\u7684**\u9E2D\u5F0F\u8FA8\u578B\u6CD5**\u5C31\u662F\`\u50CF\u9E2D\u5B50\u4E00\u6837\u8D70\u8DEF\u5E76\u4E14\u560E\u560E\u53EB\u7684\u5C31\u53EB\u9E2D\u5B50\`\uFF0C\u5373\u5177\u6709\u9E2D\u5B50\u7279\u5F81\u7684\u8BA4\u4E3A\u5B83\u5C31\u662F\u9E2D\u5B50\uFF0C\u4E5F\u5C31\u662F\u901A\u8FC7\u5236\u5B9A\u89C4\u5219\u6765\u5224\u5B9A\u5BF9\u8C61\u662F\u5426\u5B9E\u73B0\u8FD9\u4E2A\u63A5\u53E3\u3002\r
+\r
+\`\`\`tsx\r
+interface LabeledValue {\r
+  label: string;\r
+}\r
+function printLabel(labeledObj: LabeledValue) {\r
+  console.log(labeledObj.label);\r
+}\r
+let myObj = { size: 10, label: "Size 10 Object" };\r
+\r
+printLabel(myObj); // OK\r
+printLabel({ size: 10, label: "Size 10 Object" }); // Error\r
+\`\`\`\r
+\r
+\u4E0A\u9762\u4EE3\u7801\uFF0C\u5728\u53C2\u6570\u91CC\u5199\u5BF9\u8C61\u5C31\u76F8\u5F53\u4E8E\u662F\u76F4\u63A5\u7ED9\`labeledObj\`\u8D4B\u503C\uFF0C\u8FD9\u4E2A\u5BF9\u8C61\u6709\u4E25\u683C\u7684\u7C7B\u578B\u5B9A\u4E49\uFF0C\u6240\u4EE5\u4E0D\u80FD\u591A\u53C2\u6216\u5C11\u53C2\u3002\u800C\u5F53\u4F60\u5728\u5916\u9762\u5C06\u8BE5\u5BF9\u8C61\u7528\u53E6\u4E00\u4E2A\u53D8\u91CF\`myObj\`\u63A5\u6536\uFF0C\`myObj\`\u4E0D\u4F1A\u7ECF\u8FC7\u989D\u5916\u5C5E\u6027\u68C0\u67E5\uFF0C\u4F46\u4F1A\u6839\u636E\u7C7B\u578B\u63A8\u8BBA\u4E3A\`let myObj: { size: number; label: string } = { size: 10, label: "Size 10 Object" };\`\uFF0C\u7136\u540E\u5C06\u8FD9\u4E2A\`myObj\`\u518D\u8D4B\u503C\u7ED9\`labeledObj\`\uFF0C\u6B64\u65F6\u6839\u636E\u7C7B\u578B\u7684\u517C\u5BB9\u6027\uFF0C\u4E24\u79CD\u7C7B\u578B\u5BF9\u8C61\uFF0C\u53C2\u7167**\u9E2D\u5F0F\u8FA8\u578B\u6CD5**\uFF0C\u56E0\u4E3A\u90FD\u5177\u6709\`label\`\u5C5E\u6027\uFF0C\u6240\u4EE5\u88AB\u8BA4\u5B9A\u4E3A\u4E24\u4E2A\u76F8\u540C\uFF0C\u6545\u800C\u53EF\u4EE5\u7528\u6B64\u6CD5\u6765\u7ED5\u5F00\u591A\u4F59\u7684\u7C7B\u578B\u68C0\u67E5\u3002\r
+\r
+##### \u7C7B\u578B\u65AD\u8A00(as)\r
+\r
+> \u7C7B\u578B\u65AD\u8A00\u7684\u610F\u4E49\u5C31\u7B49\u540C\u4E8E\u4F60\u5728\u544A\u8BC9\u7A0B\u5E8F\uFF0C\u4F60\u5F88\u6E05\u695A\u81EA\u5DF1\u5728\u505A\u4EC0\u4E48\uFF0C\u6B64\u65F6\u7A0B\u5E8F\u81EA\u7136\u5C31\u4E0D\u4F1A\u518D\u8FDB\u884C\u989D\u5916\u7684\u5C5E\u6027\u68C0\u67E5\u4E86\u3002\r
+\r
+\`\`\`tsx\r
+interface Props { \r
+  name: string; \r
+  age: number; \r
+  money?: number;\r
+}\r
+\r
+let p: Props = {\r
+  name: "\u5154\u795E",\r
+  age: 25,\r
+  money: -100000,\r
+  girl: false\r
+} as Props; // OK\r
+\`\`\`\r
+\r
+##### \u7D22\u5F15\u7B7E\u540D\r
+\r
+#### 6.\u679A\u4E3E\uFF08enum\uFF09\r
+\r
+> \u5E38\u91CF\u662F\u5728\u9879\u76EE\u4E2D\u7ECF\u5E38\u4F7F\u7528\uFF0C\u867D\u7136 \`const\` \u53EF\u4EE5\u58F0\u660E\u5E38\u91CF\uFF0C\u4F46\u662F\u6709\u7684\u5E38\u91CF\u53D6\u503C\u662F\u5728\u4E00\u4E2A\u8303\u56F4\u91CC\u7684\uFF0C\u8FD9\u91CC\u6211\u4EEC\u5C31\u9700\u8981\u4F7F\u7528 \`enum\` \u6765\u8FDB\u884C\u5904\u7406\r
+\r
+##### \u6570\u5B57\u679A\u4E3E\r
+\r
+\`\`\`tsx\r
+enum Week {\r
+    Monday,\r
+    Tuesday,\r
+    Wednesday,\r
+    Thursday,\r
+    Friday,\r
+    Staurday,\r
+    Sunday\r
+}\r
+console.log(Week.Monday,Week[0]) // 1  Monday\r
+\`\`\`\r
+\r
+\`\u53EF\u4EE5\u4FEE\u6539\u679A\u4E3E\u4E2D\u7684\u521D\u59CB\u503C,\u4FEE\u6539\u4E4B\u540E\u4EE5\u6B64\u589E\u52A0\`\r
+\r
+\`\`\`tsx\r
+enum Week {\r
+    Monday = 4,\r
+    Tuesday,\r
+    Wednesday,\r
+    Thursday,\r
+    Friday,\r
+    Staurday,\r
+    Sunday\r
+}\r
+console.log(Week.Monday,Week.Tuesday) // 4 5\r
+\`\`\`\r
+\r
+##### \u5B57\u7B26\u4E32\u679A\u4E3E\r
+\r
+\`\`\`tsx\r
+enum Week {\r
+    Monday = '\u5468\u4E00',\r
+    Tuesday = '\u5468\u4E8C',\r
+    Wednesday = '\u5468\u4E09',\r
+    Thursday = '\u5468\u56DB',\r
+    Friday = '\u5468\u4E94',\r
+    Staurday = '\u5468\u516D',\r
+    Sunday= '\u5468\u65E5'\r
+}\r
+\`\`\`\r
+\r
+##### \u5E38\u91CF\u679A\u4E3E\r
+\r
+> \u5728 \`enum\` \u524D\u9762\u6DFB\u52A0\u4E00\u4E2A \`const\` \u5373\u53EF\uFF0C\u5B83\u63D0\u9AD8\u4E86\u6027\u80FD\r
+\r
+#### 7.\u6CDB\u578B\r
+\r
+> \u6CDB\u578B\u5C31\u50CF\u4E00\u4E2A\u5360\u4F4D\u7B26\u4E00\u4E2A\u53D8\u91CF\uFF0C\u5728\u4F7F\u7528\u7684\u65F6\u5019\u6211\u4EEC\u53EF\u4EE5\u5C06\u5B9A\u4E49\u597D\u7684\u7C7B\u578B\u50CF\u53C2\u6570\u4E00\u6837\u4F20\u5165\uFF0C\u539F\u5C01\u4E0D\u52A8\u7684\u8F93\u51FA`,hn=`---\r
+title: vue\u5F00\u53D1\u4F53\u9A8C\r
+date: 2023-11-23 15:32:00\r
+tags: vue\r
+cover_picture:\r
+\r
+\r
+---\r
+\r
+#### vue\r
+\r
+###### \u52A8\u6001\u7EC4\u4EF6\uFF1A\r
+\r
+\`\`\`vue\r
+<component :is='\u7EC4\u4EF6\u540D'></component>\r
+\`\`\`\r
+\r
+\r
+\r
+##### \u7EC4\u4EF6\u5411\u5916\u4E8C\u6B21\u66B4\u9732\u63D2\u69FD\r
+\r
+\`\`\`\r
+<template v-for="item in config" v-slot:[item.prop]="props">\r
+	<slot :name="item.prop" v-bind="props"></slot>\r
+</template>\r
+\`\`\`\r
+\r
+\r
+\r
+#### vue3\r
+\r
+###### *defineProps*:\r
+\r
+\u200B		defineProps\u5728<script setup>\u4E2D\u81EA\u52A8\u53EF\u7528\uFF0C\u65E0\u9700\u5BFC\u5165\r
+\r
+\`\`\`vue\r
+<template>\r
+  <span>{{props.name}}</span>\r
+  // \u53EF\u7701\u7565\u3010props.\u3011\r
+  <span>{{name}}</span>\r
+</template>\r
+<script setup>\r
+  // defineProps\u5728<script setup>\u4E2D\u81EA\u52A8\u53EF\u7528\uFF0C\u65E0\u9700\u5BFC\u5165\r
+  // \u58F0\u660Eprops(\u81EA\u5B9A\u4E49\u503C)\r
+  const props = defineProps({\r
+    name: {\r
+      type: String,\r
+      default: ''\r
+    }\r
+  }) \r
+  // \u5728script\u4E2D\u4E0D\u53EF\u7701\u7565props\r
+  console.log(props.name)\r
+<\/script>\r
+\`\`\`\r
+\r
+###### *emit*\u5B50\u4F20\u7236\r
+\r
+\`\`\`vue\r
+<script setup>\r
+  // defineEmits\u548CdefineProps\u5728<script setup>\u4E2D\u81EA\u52A8\u53EF\u7528\uFF0C\u65E0\u9700\u5BFC\u5165\r
+  // \u58F0\u660E\u4E8B\u4EF6\r
+  const emit = defineEmits(['updateName'])\r
+  const changeName = () => {\r
+    // \u6267\u884C\r
+    emit('updateName', 'Tom')\r
+  }\r
+<\/script>\r
+\`\`\`\r
+\r
+###### *defineExpose*\r
+\r
+\u200B	\u5728\u6807\u51C6\u7EC4\u4EF6\u5199\u6CD5\u91CC\uFF0C\u5B50\u7EC4\u4EF6\u7684\u6570\u636E\u90FD\u662F\u9ED8\u8BA4\u9690\u5F0F\u66B4\u9732\u7ED9\u7236\u7EC4\u4EF6\u7684\uFF0C\u4F46\u5728 <script setup> \u6A21\u5F0F\u4E0B\uFF0C\u6240\u6709\u6570\u636E\u53EA\u662F\u9ED8\u8BA4 return \u7ED9 template \u4F7F\u7528\uFF0C\u4E0D\u4F1A\u66B4\u9732\u5230\u7EC4\u4EF6\u5916\uFF0C\u6240\u4EE5\u7236\u7EC4\u4EF6\u662F\u65E0\u6CD5\u76F4\u63A5\u901A\u8FC7\u6302\u8F7D ref \u53D8\u91CF\u83B7\u53D6\u5B50\u7EC4\u4EF6\u7684\u6570\u636E\u3002\r
+\r
+\u200B	\u5982\u679C\u8981\u8C03\u7528\u5B50\u7EC4\u4EF6\u7684\u6570\u636E\uFF0C\u9700\u8981\u5148\u5728\u5B50\u7EC4\u4EF6\u663E\u793A\u7684\u66B4\u9732\u51FA\u6765\uFF0C\u624D\u80FD\u591F\u6B63\u786E\u7684\u62FF\u5230\uFF0C\u8FD9\u4E2A\u64CD\u4F5C\uFF0C\u5C31\u662F\u7531 defineExpose \u6765\u5B8C\u6210\u3002\r
+\r
+\`\`\`vue\r
+<template>\r
+  <span>{{state.name}}</span>\r
+</template>\r
+<script setup>\r
+  import { reactive} from 'vue'\r
+  // \u58F0\u660Estate\r
+  const state = reactive({\r
+    name: 'Jerry'\r
+  }) \r
+  // \u5C06\u65B9\u6CD5\u3001\u53D8\u91CF\u66B4\u9732\u7ED9\u7236\u7EC4\u4EF6\u4F7F\u7528\uFF0C\u7236\u7EC4\u4EF6\u624D\u53EF\u901A\u8FC7ref API\u62FF\u5230\u5B50\u7EC4\u4EF6\u66B4\u9732\u7684\u6570\u636E\r
+  defineExpose({\r
+    state\r
+  })\r
+<\/script>\r
+\`\`\`\r
+\r
+###### *v-model*\r
+\r
+\u200B	vue3\u7684v-model\u662Fv-model:modelValue\u7684\u7B80\u5199\uFF0C\u652F\u6301\u7ED1\u5B9A\u591A\u4E2Av-model\uFF0C\u4F8B\u5982v-model:name\r
+\r
+> \u7236\u7EC4\u4EF6\r
+\r
+\`\`\`vue\r
+<template>\r
+  // v-model:modelValue\u7B80\u5199\u4E3Av-model\r
+  // \u53EF\u7ED1\u5B9A\u591A\u4E2Av-model\r
+  <child\r
+    v-model="state.name"\r
+    v-model:age="state.age"\r
+  />\r
+</template>\r
+<script setup>\r
+  import { reactive } from 'vue'\r
+  // \u5F15\u5165\u5B50\u7EC4\u4EF6\r
+  import child from './child.vue'\r
+  const state = reactive({\r
+    name: 'Jerry',\r
+    age: 20\r
+  })\r
+<\/script>\r
+\`\`\`\r
+\r
+> \u5B50\u7EC4\u4EF6\r
+\r
+\`\`\`vue\r
+<template>\r
+  <span>\u6211\u53EB{{ modelValue }}\uFF0C\u4ECA\u5E74{{ age }}\u5C81</span>\r
+</template>\r
+<script setup>\r
+  defineProps({\r
+    modelValue: String,\r
+    age: Number\r
+  })\r
+<\/script>\r
+\`\`\`\r
+\r
+\u539F\u7406\uFF1A\r
+\r
+\`\`\`vue\r
+<!-- \u7236\u7EC4\u4EF6 -->\r
+<template>\r
+	<my-component v-model="msg"></my-component>\r
+	<!-- \u7B49\u540C\u4E8E -->\r
+	<my-component :modelValue="msg" @update:modelValue="msg = $event"></my-component>\r
+</template>\r
+\`\`\`\r
+\r
+\u5B50\u7EC4\u4EF6\u7684\u503C\u6539\u53D8\u4E86\uFF0C\u901A\u77E5\u7236\u7EC4\u4EF6\u53BB\u4FEE\u6539\u6539\u503C\r
+\r
+###### \u5C01\u88C5\u5B50\u7EC4\u4EF6\r
+\r
+> useModel.js\r
+\r
+\`\`\`javascript\r
+export function useModel(props,propName,emit){\r
+    return computed({\r
+        get(){\r
+            new Proxy(props[propName],{\r
+                set(obj,name,val){\r
+                    emit('update:' + propName,{\r
+                        ...obj,\r
+                        [name]: val\r
+                    })\r
+                    return true\r
+                }\r
+        	})\r
+        },\r
+        set(val){\r
+        emit('update:' + propName,val)\r
+		}\r
+    })\r
+}\r
+\`\`\`\r
+\r
+> \u5B50\u7EC4\u4EF6\u4E2D\u4F7F\u7528\r
+\r
+\`\`\`javascript\r
+const emit = defineEmits(['update:modelValue'])\r
+const model = useModel(props,'modelValue',emit)\r
+\`\`\`\r
+\r
+\r
+\r
+###### \u8DEF\u7531\u5BFC\u822A\u5B88\u536B\r
+\r
+\`\`\`vue\r
+<script setup>\r
+  import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'\r
+  // \u6DFB\u52A0\u4E00\u4E2A\u5BFC\u822A\u5B88\u536B\uFF0C\u5728\u5F53\u524D\u7EC4\u4EF6\u5C06\u8981\u79BB\u5F00\u65F6\u89E6\u53D1\u3002\r
+  onBeforeRouteLeave((to, from, next) => {\r
+    next()\r
+  })\r
+  // \u6DFB\u52A0\u4E00\u4E2A\u5BFC\u822A\u5B88\u536B\uFF0C\u5728\u5F53\u524D\u7EC4\u4EF6\u66F4\u65B0\u65F6\u89E6\u53D1\u3002\r
+  // \u5728\u5F53\u524D\u8DEF\u7531\u6539\u53D8\uFF0C\u4F46\u662F\u8BE5\u7EC4\u4EF6\u88AB\u590D\u7528\u65F6\u8C03\u7528\u3002\r
+  onBeforeRouteUpdate((to, from, next) => {\r
+    next()\r
+  })\r
+<\/script>\r
+\`\`\`\r
+\r
+###### \u539F\u578B\u7ED1\u5B9A\u4E0E\u7EC4\u4EF6\u5185\u4F7F\u7528\r
+\r
+> main.js\r
+\r
+\`\`\`js\r
+import { createApp } from 'vue'\r
+import App from './App.vue'\r
+const app = createApp(App)\r
+// \u83B7\u53D6\u539F\u578B\r
+const prototype = app.config.globalProperties\r
+// \u7ED1\u5B9A\u53C2\u6570\r
+prototype.name = 'Jerry'\r
+\`\`\`\r
+\r
+> \u7EC4\u4EF6\u5185\u4F7F\u7528\r
+\r
+\`\`\`vue\r
+<script setup>\r
+  import { getCurrentInstance } from 'vue'\r
+  // \u83B7\u53D6\u539F\u578B\r
+  const { proxy } = getCurrentInstance()\r
+  // \u8F93\u51FA\r
+  console.log(proxy.name)\r
+<\/script>\r
+\`\`\`\r
+\r
+###### v-bind\uFF08\uFF09\u5B9E\u73B0css\u53D8\u91CF\u6CE8\u5165\r
+\r
+\`\`\`vue\r
+<template>\r
+  <span>Jerry</span>\r
+</template>\r
+<script setup>\r
+  import { ref, reactive } from 'vue'\r
+  // prop\u63A5\u6536\u6837\u5F0F\r
+  const props = defineProps({\r
+    border: {\r
+      type: String,\r
+      default: '1px solid yellow'\r
+    }\r
+  })\r
+  // \u5E38\u91CF\u58F0\u660E\u6837\u5F0F\r
+  const background = 'red' \r
+  // \u54CD\u5E94\u5F0F\u6570\u636E\u58F0\u660E\u6837\u5F0F\r
+  const color = ref('blue')\r
+  const style = reactive({\r
+    opacity: '0.8'\r
+  })\r
+<\/script>\r
+<style lang="scss" scoped>\r
+  span {\r
+    // \u4F7F\u7528\u5E38\u91CF\u58F0\u660E\u7684\u6837\u5F0F\r
+    background: v-bind(background);\r
+    // \u4F7F\u7528\u54CD\u5E94\u5F0F\u6570\u636E\u58F0\u660E\u7684\u6837\u5F0F\r
+    color: v-bind(color);\r
+    opacity: v-bind('style.opacity');\r
+    // \u4F7F\u7528prop\u63A5\u6536\u7684\u6837\u5F0F\r
+    border: v-bind('props.border');\r
+  }\r
+</style>\r
+\`\`\`\r
+\r
+###### provide\u548Cinject\r
+\r
+> \u7236\u7EC4\u4EF6\r
+\r
+\`\`\`vue\r
+<template>\r
+  <child/>\r
+</template>\r
+<script setup>\r
+  import { ref, provide } from 'vue'\r
+  import child from './child.vue'\r
+  let name = ref('Jerry')\r
+  // \u58F0\u660Eprovide\r
+  provide('provideState', {\r
+    name,\r
+  })\r
+<\/script>\r
+\`\`\`\r
+\r
+> \u5B50\u7EC4\u4EF6\r
+\r
+\`\`\`vue\r
+<script setup>\r
+  import { inject } from 'vue'\r
+  // \u6CE8\u5165\uFF0C\u7B2C\u4E8C\u4E2A\u53C2\u6570\u4E3A\u9ED8\u8BA4\u503C\r
+  const provideState = inject('provideState', {})\r
+<\/script>\r
+\`\`\`\r
+\r
+###### \u5BF9await\u7684\u652F\u6301\r
+\r
+vue3\u4E0D\u5FC5\u518D\u914D\u5408async\u5C31\u53EF\u4EE5\u76F4\u63A5\u5728<script setup>\u4E2D\u76F4\u63A5\u4F7F\u7528await\uFF0C\u7EC4\u4EF6\u7684setup\u4F1A\u81EA\u52A8\u53D8\u6210async setup\r
+\r
+\r
+\r
+###### v-if\u663E\u793A\u9519\u4F4D\u95EE\u9898\r
+\r
+\u82E5v-if\u5207\u6362\u7684\u662F\u903B\u8F91\u590D\u6742\u7684\u63A7\u4EF6\u65F6\uFF0C\u5207\u6362\u65F6\u4E0D\u91CD\u65B0\u6E32\u67D3\u6781\u6613\u51FA\u95EE\u9898\r
+\u9700\u8981\u7ED9\u8981\u91CD\u65B0\u6E32\u67D3\u7684\u63A7\u4EF6\u6DFB\u52A0\u4E00\u4E2Akey\u5C5E\u6027\uFF0C\u6765\u552F\u4E00\u6807\u8BC6\u8BE5\u63A7\u4EF6\uFF0C\u88ABkey\u6807\u8BC6\u540E\u4F1A\u91CD\u65B0\u6E32\u67D3\u3002\u5B9E\u4F8B\u5982\u4E0B\r
+\r
+\`\`\`vue\r
+<template v-if="type=== 'username'" key="1"> \r
+	<label>\u7528\u6237\u540D</label> \r
+	<input placeholder="\u8F93\u5165\u7528\u6237\u540D"> \r
+</template> \r
+<template v-else key="2"> \r
+	<label>\u90AE\u7BB1</label> \r
+	<input placeholder="\u8F93\u5165\u90AE\u7BB1"> \r
+</template>\r
+\`\`\`\r
+\r
+###### vue3\u83B7\u53D6this\r
+\r
+\u800C Vue3 \u7EC4\u5408\u5F0F API \u4E2D\u6CA1\u6709 this\uFF0C\u5982\u679C\u60F3\u8981\u7C7B\u4F3C\u7684\u7528\u6CD5\uFF0C\u6709\u4E24\u79CD\uFF0C\u4E00\u662F\u83B7\u53D6\u5F53\u524D\u7EC4\u4EF6\u5B9E\u4F8B\uFF0C\u4E8C\u662F\u83B7\u53D6\u5168\u5C40\u5B9E\u4F8B\r
+\r
+\`\`\`vue\r
+<script setup>\r
+import { getCurrentInstance } from 'vue'\r
+\r
+// proxy \u5C31\u662F\u5F53\u524D\u7EC4\u4EF6\u5B9E\u4F8B\uFF0C\u53EF\u4EE5\u7406\u89E3\u4E3A\u7EC4\u4EF6\u7EA7\u522B\u7684 this\uFF0C\u6CA1\u6709\u5168\u5C40\u7684\u3001\u8DEF\u7531\u3001\u72B6\u6001\u7BA1\u7406\u4E4B\u7C7B\u7684\r
+const { proxy, appContext } = getCurrentInstance()\r
+\r
+// \u8FD9\u4E2A global \u5C31\u662F\u5168\u5C40\u5B9E\u4F8B\r
+const global = appContext.config.globalProperties\r
+<\/script>\r
+\`\`\`\r
+\r
+###### vue3\u5168\u5C40\u6CE8\u518C\r
+\r
+Vue2 \u4E2D\u6211\u4EEC\u8981\u5F80\u5168\u5C40\u4E0A\u6302\u8F7D\u4E1C\u897F\u901A\u5E38\u5C31\u662F\u5982\u4E0B\uFF0C\u7136\u540E\u5728\u6240\u6709\u7EC4\u4EF6\u91CC\u90FD\u53EF\u4EE5\u901A\u8FC7 \`this.xxx\` \u83B7\u53D6\u5230\u4E86\r
+\r
+\`\`\`vue\r
+Vue.prototype.xxx = xxx\r
+\`\`\`\r
+\r
+\u800C Vue3 \u4E2D\u4E0D\u80FD\u8FD9\u4E48\u5199\u4E86\uFF0C\u6362\u6210\u4E86\u4E00\u4E2A\u80FD\u88AB\u6240\u6709\u7EC4\u4EF6\u8BBF\u95EE\u5230\u7684\u5168\u5C40\u5BF9\u8C61\uFF0C\u5C31\u662F\u4E0A\u9762\u8BF4\u7684\u5168\u5C40\u5B9E\u4F8B\u7684\u90A3\u4E2A\u5BF9\u8C61\uFF0C\u6BD4\u5982\u5728 \`main.js\` \u4E2D\u505A\u5168\u5C40\u6CE8\u518C\r
+\r
+\`\`\`javascript\r
+// main.js\r
+import { createApp } from 'vue'\r
+import App from './App.vue'\r
+const app = createApp(App)\r
+// \u6DFB\u52A0\u5168\u5C40\u5C5E\u6027\r
+app.config.globalProperties.name = '33'\r
+\`\`\`\r
+\r
+\u5728\u5176\u4ED6\u7EC4\u4EF6\u4E2D\u8C03\u7528\r
+\r
+\`\`\`vue\r
+<script setup>\r
+import { getCurrentInstance } from 'vue'\r
+const { appContext } = getCurrentInstance()\r
+\r
+const global = appContext.config.globalProperties\r
+console.log(global.name) // \u6C90\u534E\r
+<\/script>\r
+\`\`\`\r
+\r
+`;let B=0;const k=[{content:rn},{content:nn},{content:en},{content:tn},{content:on},{content:sn},{content:an},{content:cn},{content:ln},{content:pn},{content:un},{content:dn},{content:mn},{content:hn}].reverse().map(r=>{const e=rr(r.content),o=r.content.indexOf("---",10);return r.content=r.content.substring(o+3),B+=1,{...r,...e,id:B}}),gn={__name:"index",setup(r){const o=V().currentRoute.value.query.id,s=h();return s.value=k.find(t=>t.id==o),(t,a)=>{const l=S("ui-article"),c=sr("title");return Y((i(),_(l,{text:s.value.content,data:s.value,"data-title":s.value.title},null,8,["text","data","data-title"])),[[c]])}}};const fn={class:"wrap"},vn={class:"list"},bn={class:"item-header"},yn={class:"title"},xn={class:"tag"},_n={class:"tag-name"},wn={class:"item-content flex-row-center"},jn={key:0,class:"item-content-img"},Sn=n("img",{src:"https://image.dahuangf.com/hornet_erp/1666598296426.jpg"},null,-1),Pn=[Sn],kn=["onClick"],Tn={class:"item-footer"},Cn={class:"item-footer-l"},Vn=["onClick"],An=C("more"),Dn={key:0},On={style:{"text-align":"center"}},Mn={style:{display:"inline-block",float:"none",margin:"30px auto"}},In={__name:"index",setup(r){const e=V(),{isMobile:o}=J(),s=h(!1),{nav:t}=H(),a=h({}),l=h(1),c=h(k.length);K(()=>t.searchContent,d=>{s.value=!0,setTimeout(()=>{const w=k.filter(b=>new RegExp(t.searchContent).test(b.title));c.value=w.length,a.value=w.slice(0,10),s.value=!1},300)}),a.value=k.slice(0,10);const u=(d,w,b)=>{l.value=d,a.value=k.slice((d-1)*10,d*10)},v=d=>{e.push(`/detail?id=${d.id}`)};return(d,w)=>{const b=D,I=br,nr=yr;return i(),p("div",fn,[Y((i(),p("div",vn,[(i(!0),p(j,null,A(a.value,(P,z)=>(i(),p("div",{class:"item",key:z},[n("div",bn,[n("div",null,[n("span",yn,f(P.title),1)]),n("span",xn,[m(o)?x("",!0):(i(),_(b,{key:0,size:10},{default:T(()=>[g(m(wr))]),_:1})),n("span",_n,f(P.tags),1)])]),n("div",wn,[m(o)?x("",!0):(i(),p("div",jn,Pn)),n("span",{class:"item-content-msg",onClick:er=>v(z)},f(P.description),9,kn)]),n("div",Tn,[n("div",Cn,[g(b,{color:"#999",size:15,style:{"vertical-align":"-0.1rem","margin-right":"0.6rem"}},{default:T(()=>[g(m(O))]),_:1}),n("span",null,f(P.date),1)]),n("span",{class:"item-footer-r",onClick:er=>v(P)},[An,m(o)?x("",!0):(i(),p("span",Dn," >>"))],8,Vn)])]))),128))])),[[nr,s.value]]),n("div",On,[n("div",Mn,[g(I,{background:"",layout:"prev, pager, next",total:c.value,onCurrentChange:u},null,8,["total"])])])])}}};const Rn={class:"wrap"},$n={class:"list"},En={class:"item-header"},Nn={class:"flex-row-b"},Hn={class:"title"},Ln=["onClick"],Jn={key:0},zn=C(">>"),Fn={key:0,class:"item-content flex-row-center"},Wn={__name:"index",setup(r){const e=V(),{isMobile:o}=J(),s=E([{title:"Expanding Cards",des:"\u56FE\u7247\u7684\u5361\u7247\u5F0F\u8986\u76D6"},{title:"Process",des:"\u8FDB\u5EA6\u6761"},{title:"Car Driving",des:"\u597D\u73A9\u7684\u65E0\u7F1D\u5207\u5730\u56FE\u76843D\u5F00\u8F66\u6E38\u620F"}]),t=a=>{e.push(`/study/demo/${a+1}?hide=true`)};return(a,l)=>(i(),p("div",Rn,[n("div",$n,[(i(!0),p(j,null,A(s,(c,u)=>(i(),p("div",{class:"item",key:u},[n("div",En,[n("div",Nn,[n("span",Hn,f(c.title),1),n("span",{class:"title-more",onClick:v=>t(u)},[m(o)?x("",!0):(i(),p("span",Jn,"Enter ")),zn],8,Ln)])]),c.des?(i(),p("div",Fn,f(c.des),1)):x("",!0)]))),128))])]))}},Bn=y(Wn,[["__scopeId","data-v-ca8cf8d4"]]);const Un={class:"date"},qn=C("2022/11/23 "),Gn={class:"demo flex"},Kn=["onClick"],Yn=["src"],Xn={__name:"1",setup(r){const e=E(["/imgs/demo/1/demo1_1.jpg","/imgs/demo/1/demo1_2.jpg","/imgs/demo/1/demo1_3.jpg","/imgs/demo/1/demo1_4.jpg"]),o=h(0);return(s,t)=>{const a=D;return i(),p(j,null,[n("div",Un,[g(a,{class:"icon"},{default:T(()=>[g(m(O))]),_:1}),qn]),n("div",Gn,[(i(!0),p(j,null,A(e,(l,c)=>(i(),p("div",{key:c,class:X(["item",c===o.value?"active":""]),onClick:u=>o.value=c},[n("img",{class:"imgs",src:l,alt:""},null,8,Yn)],10,Kn))),128))])],64)}}},Qn=y(Xn,[["__scopeId","data-v-74d0088e"]]);const Zn=r=>(R("data-v-b1ae19f4"),r=r(),$(),r),re={class:"date"},ne=C("2022/11/24 "),ee={class:"demo"},te={class:"process"},oe=Zn(()=>n("div",{class:"line"},null,-1)),se={class:"flex-center footer"},ae={__name:"2",setup(r){ar(a=>({"7bcbc020":s.value}));const e=h(0),o=E([{bTtitle:"\u8FDB\u884C\u4E2D",aTitle:"\u5DF2\u7ED3\u675F",cur:!1},{bTtitle:"\u8FDB\u884C\u4E2D",aTitle:"\u5DF2\u7ED3\u675F",cur:!1},{bTtitle:"\u8FDB\u884C\u4E2D",aTitle:"\u5DF2\u7ED3\u675F",cur:!1}]),s=h("0"),t=a=>{const l=e.value;o[l].cur=a,e.value=a?e.value+1<o.length?e.value+1:e.value:e.value-1>0?e.value-1:0,s.value=`${(a?e.value-1:e.value)*15}rem`,a&&l+1==o.length&&(s.value=`${e.value*15}rem`)};return(a,l)=>{const c=D;return i(),p(j,null,[n("div",re,[g(c,{class:"icon"},{default:T(()=>[g(m(O))]),_:1}),ne]),n("div",ee,[n("div",te,[oe,(i(!0),p(j,null,A(o,(u,v)=>(i(),p("div",{class:X(["cicle",u.cur?"active":""]),key:v},f(u.cur?u.aTitle:u.bTtitle),3))),128))]),n("div",se,[n("span",{class:"pointer",onClick:l[0]||(l[0]=u=>t(!1))},"\u4E0A\u4E00\u6B65"),n("span",{class:"pointer",onClick:l[1]||(l[1]=u=>t(!0))},"\u4E0B\u4E00\u6B65")])])],64)}}},ie=y(ae,[["__scopeId","data-v-b1ae19f4"]]),ce={},le={style:{width:"100%",height:"100%"}},pe=n("div",null,[n("iframe",{src:"/w-blog/car.html",scrolling:"auto",frameborder:"0",style:{width:"100%",height:"900px"}})],-1),ue=[pe];function de(r,e){return i(),p("div",le,ue)}const me=y(ce,[["render",de]]),he=[{name:"index",path:"/",component:Xr,children:[{name:"index-about",path:"about",component:Zr,props:!0},{name:"index-detail",path:"detail",component:gn,props:!0},{name:"index-index",path:"",component:In,props:!0},{name:"index-study",path:"study",component:Bn,props:!0},{name:"index-study-demo-1",path:"study/demo/1",component:Qn,props:!0},{name:"index-study-demo-2",path:"study/demo/2",component:ie,props:!0},{name:"index-study-demo-3",path:"study/demo/3",component:me,props:!0}],props:!0}],ge=hr({history:gr("/w-blog/"),routes:he,scrollBehavior(r,e,o){return{top:0}}}),fe={};function ve(r,e){const o=S("router-view");return i(),_(o)}const be=y(fe,[["render",ve]]);const ye={class:"content"},xe={class:"content-wrap"},_e={key:0,class:"header"},we={class:"title"},je={class:"msg flex-center"},Se={class:"date"},Pe={__name:"article",props:{text:{type:String,default:""},html:{type:String,default:""},data:{type:Object,default:()=>{}}},setup(r){return(e,o)=>{const s=D,t=S("v-md-preview"),a=S("v-md-preview-html");return i(),p("div",ye,[n("div",xe,[r.data?(i(),p("div",_e,[n("h3",we,f(r.data.title),1),n("div",je,[n("div",Se,[g(s,{class:"icon"},{default:T(()=>[g(m(O))]),_:1}),C(f(r.data.date),1)])])])):x("",!0),r.text?(i(),_(t,{key:1,text:r.text},null,8,["text"])):(i(),_(a,{key:2,html:r.html,"preview-class":"vuepress-markdown-body"},null,8,["html"]))])])}}},ke=y(Pe,[["__scopeId","data-v-1718fc26"]]);N.use(pr,{Prism:mr});const M=ir(be);M.component("UiArticle",ke);M.directive("title",{mounted(r){document.title=r.dataset.title}});M.use(ge).use(lr()).use(N).use(ur).mount("#app");M.provide("toHtml",r=>dr.exports.xss.process(N.vMdParser.themeConfig.markdownParser.render(r)));export{We as a,ze as c,Fe as g};

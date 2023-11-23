@@ -10,6 +10,8 @@ import article_9 from '../../md/9.js手撕代码.md?raw'
 import article_10 from '../../md/10.listNode.md?raw'
 import article_11 from '../../md/11.promise.md?raw'
 import article_12 from '../../md/12.webpack.md?raw'
+import article_13 from '../../md/初识TypeScript.md?raw'
+import article_14 from '../../md/vue开发体验.md?raw'
 import { formatMd } from '../utils/tools'
 
 let id = 0
@@ -49,16 +51,24 @@ const articles = [
   },
   {
     content: article_12
+  },
+  {
+    content: article_13
+  },
+  {
+    content: article_14
   }
-].map((i) => {
-  const data = formatMd(i.content)
-  const index = i.content.indexOf('---', 10)
-  i.content = i.content.substring(index + 3)
-  id += 1
-  return {
-    ...i,
-    ...data,
-    id
-  }
-})
+]
+  .reverse()
+  .map((i) => {
+    const data = formatMd(i.content)
+    const index = i.content.indexOf('---', 10)
+    i.content = i.content.substring(index + 3)
+    id += 1
+    return {
+      ...i,
+      ...data,
+      id
+    }
+  })
 export default articles

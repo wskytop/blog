@@ -11,7 +11,7 @@ yarn build
 ```
   - dist   // 打包文件
   - public // 发布环境html同级文件目录
-  - src    // 项目核心代买
+  - src    // 项目核心代码
     - compontents // vue组件目录
     - config      // 常量类型配置文件
     - pages       // 页面管理

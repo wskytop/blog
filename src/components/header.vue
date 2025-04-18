@@ -66,7 +66,7 @@ const getQuotation = async () => {
     if (result.status == 200) quotation.value = result.data
   })
 }
-getQuotation()
+// getQuotation()
 const $router = useRouter()
 const author = ref({})
 author.value = kyt

@@ -29,8 +29,8 @@ const { isMobile } = useHandler()
 // 展示的数据
 const list = reactive([
   { title: 'Expanding Cards', des: '图片的卡片式覆盖' },
-  { title: 'Process', des: '进度条' },
-  { title: 'Car Driving', des: '好玩的无缝切地图的3D开车游戏' }
+  { title: 'Process', des: '进度条' }
+  // { title: 'Car Driving', des: '好玩的无缝切地图的3D开车游戏' }
 ])
 const goDetail = (index) => {
   $router.push(`/study/demo/${index + 1}?hide=true`)
